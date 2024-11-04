@@ -19,7 +19,7 @@
     </ul>
 
     <div style="text-align: center;">
-        <h1>Weird Hamster Ball Game</h1>
+        <h1 class="article-title">Weird Hamster Ball Game</h1>
     </div>
 
     <div class="main-container">
@@ -34,8 +34,13 @@
 
             <br>
             <br>
+
+            <iframe class="youtube-video-player" src="https://www.youtube.com/embed/i_34XPndMCA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
             <br>
-            For this year’s GMTK Game Jam, rather than using a more established engine like Unity, Unreal, or Godot, I decided to try using my own engine that I’ve been working on, Gadget Engine. This presented a number of challenges and definitely limited the quality of game that I was able to produce, but ultimately was very rewarding and helped me identify a number of issues and fix numerous bugs (I made 52 commits to the engine during the jam).
+            <br>
+
+            For this year’s <a href="https://itch.io/jam/gmtk-2024">GMTK Game Jam</a>, rather than using a more established engine like Unity, Unreal, or Godot, I decided to try using my own engine that I’ve been working on, <a href="">Gadget Engine</a>. This presented a number of challenges and definitely limited the quality of game that I was able to produce, but ultimately was very rewarding and helped me identify a number of issues and fix numerous bugs (I made 52 commits to the engine during the jam).
         
             <br>
             <br>
@@ -49,7 +54,17 @@
 
             <br>
             <br>
+
+            <iframe width="80%" height="35%" class="youtube-video-player" src="https://www.youtube.com/embed/0gvdNaWN8-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <br>
+            <br>
             What was a huge workflow issue was that I don’t have a level editor. All my scenes and objects and stuff are defined in C++, which means I just had to guess positions and do a slow build step before I could see if it worked. This is something I should definitely explore for future game jams, in theory I’m able to serialize objects and such, it’s just the editor itself that I haven’t fully explored yet. To work around this I created a new kind of collider that takes a triangle mesh as its input, so I can easily set up collision on something created in a 3D modelling program such as Blender. The goal was to create the whole level in Blender, but by the time I got the mesh colliders in and and addressed all the other things the game needed I really only had time to create the ramp in Blender, which was then haphazardly reused via for loops. If I had a little bit more time I could’ve done something a bit more interesting, but by the halfway point of the final day I was getting pretty tired and decided to call it.
+
+            <br>
+            <br>
+
+            <iframe width="80%" height="35%" class="youtube-video-player" src="https://www.youtube.com/embed/XrYj-01eXC0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <br>
             <br>
@@ -60,7 +75,6 @@
             <br>
 
             You can download and play the game <a href="https://shikengames.itch.io/weird-hamster-ball-game">from the itch.io page.</a>
-            
         </p>
     </p>
     </div>
