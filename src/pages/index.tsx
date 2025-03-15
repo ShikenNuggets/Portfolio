@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default function Home() {
       <title>{ TITLE }</title>
     </Helmet>
     <body className={'$(inter.className) antialiased'}>
-
+      <Navbar />
     </body>
     </>
   );
