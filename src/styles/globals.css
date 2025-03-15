@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 0px;
+}
+
+.project-container{
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  flex: 1 1 30%;
+  min-width: 350px;
+  max-width: 30%;
+  margin: 0;
+  padding: 5px;
+}
+
+.project-container:hover{
+  filter: drop-shadow(0px 0px 6px white);
+}
+
+.project-container .project-text{
+  position: absolute;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+  margin-left: clamp(0.75rem, 0.85vw, 2rem);
+  margin-bottom: clamp(0.75rem, 0.85vw, 2rem);
+  left: 0px;
+  bottom: 0px;
+  color: #f1f1f1;
+  text-align: left;
+  font-size: clamp(0.65rem, 0.7vw, 2rem);
+  line-height: clamp(0.65rem, 0.7vw, 2rem);
+  filter: drop-shadow(0px 0px 4px black);
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
