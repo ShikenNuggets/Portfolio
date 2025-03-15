@@ -115,6 +115,10 @@ body {
     padding-bottom: 600px;
 }
 
+.article-content strong{
+    color: rgba(255, 255, 255, 1);
+}
+
 a {
     color: rgb(124, 188, 209);
 }
@@ -124,6 +128,6 @@ a {
 }
 
 .youtube-video-player{
-    width: 75%;
+    width: 100%;
     height: 20%;
 }
