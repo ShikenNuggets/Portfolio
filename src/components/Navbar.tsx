@@ -5,7 +5,7 @@ import React from 'react'
 const Navbar = () => {
 	return (
 		<>
-			<nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
+			<nav className='w-full fixed-top px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
 				<a href="#top">
 					<h1>Games by Carter</h1>
 				</a>
