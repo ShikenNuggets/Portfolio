@@ -2,6 +2,16 @@
 import Image from 'next/image'
 import React from 'react'
 
+interface SectionProps{
+	title: string;
+}
+
+function SectionHeader({title}: SectionProps){
+	return(
+		<h1 className='section-header'>{title}</h1>
+	);
+}
+
 interface ProjectProps{
 	title: string;
 	type: string;
@@ -30,7 +40,7 @@ const Projects = () => {
 		<>
 		<div>
 			<div className='main-container'>
-				<h1 className='section-header'>Recent Projects</h1>
+				<SectionHeader title='Recent Projects'/>
 				<ProjectEntry title='Weird Hamster Ball Game' type='Game Jam' tech='C++' years='2024' imgSrc='/whbg.png' />
 				<ProjectEntry title='Secret Identity' type='Personal Project' tech='UE5 / C++' years='2024' imgSrc='/secret-identity.png' />
 				<ProjectEntry title='Disney Magic Kingdoms' type='Gameloft' tech='C++' years='2019-2024' imgSrc='/dmk.png' />
@@ -42,7 +52,7 @@ const Projects = () => {
 		<br/>
 		<div>
 			<div className="main-container">
-				<h1 className='section-header'>Other Projects</h1>
+				<SectionHeader title='Other Projects'/>
 				<ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' imgSrc='/javachess.png' />
 				<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' imgSrc='/batman.png' />
 				<ProjectEntry title='Peggle Clone' type='School Project - Peggle' tech='C++' years='2017' imgSrc='/peggle.png' />

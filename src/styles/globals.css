@@ -33,6 +33,7 @@ body {
 .section-header{
   flex: 1 1 100%; /* This forces the item to occupy the entire row */
   padding: 15px;
+  font-size: x-large;
 }
 
 .background{
