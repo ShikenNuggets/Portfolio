@@ -25,9 +25,9 @@ function ProjectEntry({ title, type, tech, years, imgSrc }: ProjectProps){
 		<div className='project-container'>
 			<Image src={imgSrc} width={600} height={400} alt={title} />
 			<div className='project-text'>
-				<h1>{type}</h1>
-				<h1>{tech}</h1>
-				<h1>{years}</h1>
+				<h2>{type}</h2>
+				<h2>{tech}</h2>
+				<h2>{years}</h2>
 			</div>
 		</div>
 	);
