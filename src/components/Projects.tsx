@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 interface SectionProps{
 	title: string;
@@ -23,12 +24,14 @@ interface ProjectProps{
 function ProjectEntry({ title, type, tech, years, imgSrc }: ProjectProps){
 	return(
 		<div className='project-container'>
-			<Image src={imgSrc} width={600} height={400} alt={title} />
-			<div className='project-text'>
-				<h2>{type}</h2>
-				<h2>{tech}</h2>
-				<h2>{years}</h2>
-			</div>
+			<Link href="/projects/whbg">
+				<Image src={imgSrc} width={600} height={400} alt={title} />
+				<div className='project-text'>
+					<h2>{type}</h2>
+					<h2>{tech}</h2>
+					<h2>{years}</h2>
+				</div>
+			</Link>
 		</div>
 	);
 }
