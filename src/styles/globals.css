@@ -23,6 +23,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Inter, Arial, Helvetica, sans-serif;
+  background-image: url('/background-1080.png');
+}
+
+.test{
+  max-width: 100%;
+}
+
+.section-header{
+  flex: 1 1 100%; /* This forces the item to occupy the entire row */
+  padding: 15px;
+}
+
+.background{
+  background-image: "background.png";
 }
 
 .main-container{
@@ -31,6 +45,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-right: 0px;
+  padding: 2%;
 }
 
 .project-container{
@@ -38,11 +53,10 @@ body {
   margin: 0 auto;
   width: auto;
   height: auto;
-  flex: 1 1 30%;
-  min-width: 350px;
-  max-width: 30%;
+  flex: 1 1 32%;
   margin: 0;
   padding: 5px;
+  justify-items: center;
 }
 
 .project-container:hover{
@@ -50,6 +64,7 @@ body {
 }
 
 .project-container .project-text{
+  justify-self: center;
   position: absolute;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
   margin-left: clamp(0.75rem, 0.85vw, 2rem);

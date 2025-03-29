@@ -24,6 +24,23 @@ const inter = Inter({
 
 const TITLE = 'Games by Carter';
 
+//import Background from "/background.png"
+
+import Background from "../../public/background.png"
+
+const sectionStyle = {
+  outerWidth: "100%",
+  outerHeight: "100%",
+  backgroundImage: "url(" + { Background } + ")"
+};
+
+export function Test(){
+  return (
+    <section style={ sectionStyle }>
+    </section>
+  );
+};
+
 export default function Home() {
   return (
     <>
