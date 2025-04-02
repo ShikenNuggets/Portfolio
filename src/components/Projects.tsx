@@ -18,14 +18,17 @@ interface ProjectProps{
 	type: string;
 	tech: string;
 	years: string;
-	imgSrc: string;
+	shortName: string;
 }
 
-function ProjectEntry({ title, type, tech, years, imgSrc }: ProjectProps){
+function ProjectEntry({ title, type, tech, years, shortName }: ProjectProps){
+	const articleLink = 'projects/' + shortName;
+	const imageName = '/' + shortName + '.png';
+
 	return(
 		<div className='project-container'>
-			<Link href="/projects/whbg">
-				<Image src={imgSrc} width={600} height={400} alt={title} />
+			<Link href={articleLink}>
+				<Image src={imageName} width={600} height={400} alt={title} />
 				<div className='project-text'>
 					<h2>{type}</h2>
 					<h2>{tech}</h2>
@@ -44,23 +47,23 @@ const Projects = () => {
 		<div>
 			<div className='main-container'>
 				<SectionHeader title='Recent Projects'/>
-				<ProjectEntry title='Weird Hamster Ball Game' type='Game Jam' tech='C++' years='2024' imgSrc='/whbg.png' />
-				<ProjectEntry title='Secret Identity' type='Personal Project' tech='UE5 / C++' years='2024' imgSrc='/secret-identity.png' />
-				<ProjectEntry title='Disney Magic Kingdoms' type='Gameloft' tech='C++' years='2019-2024' imgSrc='/dmk.png' />
-				<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022-2024' imgSrc='/gadget.png' />
-				<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017-2019' imgSrc='/roof-toppers.png' />
-				<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' imgSrc='/splintergear.png' />
+				<ProjectEntry title='Weird Hamster Ball Game' type='Game Jam' tech='C++' years='2024' shortName='whbg' />
+				<ProjectEntry title='Secret Identity' type='Personal Project' tech='UE5 / C++' years='2024' shortName='secret-identity' />
+				<ProjectEntry title='Disney Magic Kingdoms' type='Gameloft' tech='C++' years='2019-2024' shortName='dmk' />
+				<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022-2024' shortName='gadget' />
+				<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017-2019' shortName='roof-toppers' />
+				<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' shortName='splintergear' />
 			</div>
 		</div>
 		<br/>
 		<div>
 			<div className="main-container">
 				<SectionHeader title='Other Projects'/>
-				<ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' imgSrc='/javachess.png' />
-				<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' imgSrc='/batman.png' />
-				<ProjectEntry title='Peggle Clone' type='School Project - Peggle' tech='C++' years='2017' imgSrc='/peggle.png' />
-				<ProjectEntry title='JavaScript Fighter' type='School Project - Street Fighter' tech='JavaScript' years='2017' imgSrc='/jsfighter.png' />
-				<ProjectEntry title='Battleship' type='School Project - Battleship' tech='C#' years='2016' imgSrc='/battleship.png' />
+				<ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' shortName='javachess' />
+				<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' shortName='batman' />
+				<ProjectEntry title='Peggle Clone' type='School Project - Peggle' tech='C++' years='2017' shortName='peggle' />
+				<ProjectEntry title='JavaScript Fighter' type='School Project - Street Fighter' tech='JavaScript' years='2017' shortName='jsfighter' />
+				<ProjectEntry title='Battleship' type='School Project - Battleship' tech='C#' years='2016' shortName='battleship' />
 				<PlaceHolder />
 			</div>
 		</div>
