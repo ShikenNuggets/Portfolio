@@ -4,6 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
+import ProjectInfo from "@/components/ProjectInfo"
 import Projects from "@/components/Projects";
 import VideoFrame from "@/components/VideoFrame";
 
@@ -35,10 +36,12 @@ export default function Home() {
 	  <div>
 		<h1 style={{justifySelf: "center", fontSize: "xx-large"}}>Weird Hamster Ball Game</h1>
 		<div className="article-content">
-			<p><b>Team: </b> Solo</p>
-			<p><b>Type: </b> 3D Platformer (Personal - Game Jam)</p>
-			<p><b>Timeline: </b> Aug 16-19, 2024 (4 days)</p>
-			<p><b>Tech: </b> C++ (Gadget Engine) / OpenGL / Git</p>
+			<ProjectInfo
+				team="Solo"
+				type="3D Platformer (Personal - Game Jam)"
+				timeline="Aug 16-19, 2024 (4 days)"
+				tech="C++ (Gadget Engine) / OpenGL / Git"
+			/>
 
 			<VideoFrame url="https://www.youtube.com/embed/i_34XPndMCA" />
 
