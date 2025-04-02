@@ -26,7 +26,7 @@ const inter = Inter({
 
 const TITLE = 'Weird Hamster Ball Game - Games by Carter';
 
-export default function Home() {
+export default function WHBG() {
   return (
     <>
     <Helmet>

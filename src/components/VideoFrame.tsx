@@ -11,7 +11,7 @@ const VideoFrame = ({url}: VideoProps) => {
 		<>
 			<br/>
 			<iframe width="560" height="315" src={url}></iframe>
-			<br/><br/>
+			<br/>
 		</>
 	)
 }
