@@ -52,17 +52,17 @@ const Projects = () => {
 				<ProjectEntry title='Disney Magic Kingdoms' type='Gameloft' tech='C++' years='2019-2024' shortName='dmk' />
 				<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022-2024' shortName='gadget' />
 				<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017-2019' shortName='roof-toppers' />
-				<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' shortName='splintergear' />
+				<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' shortName='splinter-gear' />
 			</div>
 		</div>
 		<br/>
 		<div>
 			<div className="main-container">
 				<SectionHeader title='Other Projects'/>
-				<ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' shortName='javachess' />
+				<ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' shortName='java-chess' />
 				<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' shortName='batman' />
 				<ProjectEntry title='Peggle Clone' type='School Project - Peggle' tech='C++' years='2017' shortName='peggle' />
-				<ProjectEntry title='JavaScript Fighter' type='School Project - Street Fighter' tech='JavaScript' years='2017' shortName='jsfighter' />
+				<ProjectEntry title='JavaScript Fighter' type='School Project - Street Fighter' tech='JavaScript' years='2017' shortName='js-fighter' />
 				<ProjectEntry title='Battleship' type='School Project - Battleship' tech='C#' years='2016' shortName='battleship' />
 				<PlaceHolder />
 			</div>
