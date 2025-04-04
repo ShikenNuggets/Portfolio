@@ -29,7 +29,7 @@ const MarkdownText: React.FC<{ markdownText: string}> = ({ markdownText }) => {
 				const { href } = props;
 				// Check if the link is a YouTube URL
 				if (href && href.includes('youtube.com/watch')) {
-					return <><br/>{YouTubeEmbed(href)}<br/></>; // Render YouTube embed
+					return <>{YouTubeEmbed(href)}</>; // Render YouTube embed
 				}else{
 					return <a {...props} />; // Default link rendering
 				}

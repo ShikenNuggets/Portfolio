@@ -110,3 +110,7 @@ a:link {
   margin-right: 5%;
   margin-bottom: 1%;
 }
+
+.markdown-container p {
+  margin-bottom: 1.5em; /* Add extra space between paragraphs */
+}
