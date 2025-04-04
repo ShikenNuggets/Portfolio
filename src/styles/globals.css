@@ -118,8 +118,5 @@ a:link {
 .markdown-container ul {
   list-style-type: disc;
   padding-left: 20px;
-}
-
-.markdown-container li {
-  margin-bottom: 0.5em; /* Space between list items */
+  padding-bottom: 1.5em;
 }
