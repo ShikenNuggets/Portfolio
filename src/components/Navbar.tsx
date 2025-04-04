@@ -16,7 +16,7 @@ const Navbar = () => {
 				</ul>
 
 				<div>
-					<a href='#contact' className='hidden lg:flex items-cneter gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4'><h1>Contact</h1></a>
+					<a href='#contact' className='hidden lg:flex items-cneter gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4' style={{ textDecoration: 'none' }}><h1>Contact</h1></a>
 				</div>
 			</nav>
 		</>
