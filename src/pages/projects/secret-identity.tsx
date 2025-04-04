@@ -1,22 +1,10 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
-import ProjectInfo from "@/components/ProjectInfo"
-import VideoFrame from "@/components/VideoFrame";
 import ProjectContent from "@/components/ProjectContent";
 import getStaticPropsFromFile from "@/utils/FileContentsHelper";
-
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
 
 const inter = Inter({
 	variable: "--font-inter-sans",
