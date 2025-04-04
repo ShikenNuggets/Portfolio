@@ -7,4 +7,4 @@ This is a game I made using the Unity Game Engine for a third semester course at
 
 The goal of this project was to create a 3D game inside of Unity. I chose to make a stealth game inspired by Metal Gear Solid, Splinter Cell, and Perfect Dark.
 
-You can [download and play the game here])https://drive.google.com/open?id=1Emxxza3tvGgbfcXvveNgUjlOlFGIGWXg).
+You can [download and play the game here](https://drive.google.com/open?id=1Emxxza3tvGgbfcXvveNgUjlOlFGIGWXg).
