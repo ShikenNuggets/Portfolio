@@ -32,7 +32,6 @@ export default function ProjectCarousel(){
 		customTransition="transform 500ms ease-in-out"
 		transitionDuration={500}
 		containerClass="carousel-container"
-		removeArrowOnDeviceType={["tablet", "mobile"]}
 		deviceType="desktop"
 		dotListClass="custom-dot-list-style"
 		itemClass="carousel-item-padding-40-px"
