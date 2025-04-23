@@ -9,25 +9,16 @@ interface ProjectProps{
 	tech: string;
 	years: string;
 	shortName: string;
-	largeImage?: boolean;
 }
 
-function ProjectEntry({ title, type, tech, years, shortName, largeImage = false }: ProjectProps){
+function ProjectEntry({ title, type, tech, years, shortName}: ProjectProps){
 	const articleLink = 'projects/' + shortName;
 	const imageName = '/' + shortName + '.png';
-
-	// TODO - This is hardcoded crap. Find a better solution
-	let width = 600;
-	let height = 400;
-	if(largeImage){
-		width = 800;
-		height = 600;
-	}
 
 	return(
 		<div className='project-container'>
 			<Link href={articleLink}>
-				<Image src={imageName} width={width} height={height} alt={title} />
+				<Image src={imageName} width={1200} height={800} alt={title} />
 				<div className='project-text'>
 					<h2>{type}</h2>
 					<h2>{tech}</h2>
