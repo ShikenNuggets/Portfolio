@@ -16,6 +16,7 @@ function ProjectEntry({ title, type, tech, years, shortName, largeImage = false 
 	const articleLink = 'projects/' + shortName;
 	const imageName = '/' + shortName + '.png';
 
+	// TODO - This is hardcoded crap. Find a better solution
 	let width = 600;
 	let height = 400;
 	if(largeImage){

@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import HeroCarousel from "@/components/HeroCarousel";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,9 @@ export default function Home() {
     </Helmet>
       <Navbar />
       <HeroCarousel />
+      <br/>
+      <h1 className='section-header' style={{ margin: "0.5%" }}>Personal Projects</h1>
+      <ProjectCarousel />
       <Projects />
     </>
   );
