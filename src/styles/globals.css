@@ -12,7 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -23,7 +23,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Inter, Arial, Helvetica, sans-serif;
-  background-image: url('/background-1080.png');
 }
 
 h1{
@@ -46,10 +45,6 @@ a:link {
   flex: 1 1 100%; /* This forces the item to occupy the entire row */
   padding: 15px;
   font-size: x-large;
-}
-
-.background{
-  background-image: "background.png";
 }
 
 .main-container{
@@ -86,6 +81,7 @@ a:link {
   bottom: 0px;
   filter: drop-shadow(0px 0px 4px black);
   background-color: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
   border-radius: 5px;
 }
 
@@ -119,4 +115,44 @@ a:link {
   list-style-type: disc;
   padding-left: 20px;
   padding-bottom: 1.5em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  body {
+    background-image: none;
+    background-color: #ffffff;
+  }
+
+  .navbar {
+    background-color: rgba(200, 200, 200, 0.5);
+  }
+
+  .project-container:hover{
+    filter: drop-shadow(0px 0px 6px black);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  body {
+    background-image: url('/background-1080.png');
+    background-color: #ffffff;
+  }
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .project-container:hover{
+    filter: drop-shadow(0px 0px 6px white);
+  }
 }
