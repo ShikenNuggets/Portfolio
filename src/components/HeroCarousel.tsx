@@ -12,7 +12,7 @@ const responsive = {
 	},
 	mobile: {
 	  breakpoint: { max: 464, min: 0 },
-	  items: 2,
+	  items: 1,
 	}
 };
 
@@ -21,7 +21,7 @@ export default function HeroCarousel(){
     <>
 	<div style={{ margin: "1%" }}>
       <Carousel
-	  	arrows={false}
+	  	arrows={true}
 		swipeable={false}
 		draggable={false}
 		showDots={false}
@@ -29,6 +29,7 @@ export default function HeroCarousel(){
 		ssr={true} // means to render carousel on server-side.
 		infinite={false}
 		autoPlay={false}
+		removeArrowOnDeviceType={["desktop"]}
 		containerClass="carousel-container"
 		dotListClass="custom-dot-list-style"
 		itemClass="carousel-item-padding-40-px"
