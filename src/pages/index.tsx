@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
+import HeroCarousel from "@/components/HeroCarousel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function Home() {
       <title>{ TITLE }</title>
     </Helmet>
       <Navbar />
+      <HeroCarousel />
       <Projects />
     </>
   );

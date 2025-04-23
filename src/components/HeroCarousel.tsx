@@ -1,0 +1,47 @@
+import Link from "next/link";
+import Image from 'next/image'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+import ProjectEntry from "./ProjectEntry";
+
+const responsive = {
+	desktop: {
+	  breakpoint: { max: 3000, min: 1024 },
+	  items: 2,
+	},
+	mobile: {
+	  breakpoint: { max: 464, min: 0 },
+	  items: 1,
+	}
+};
+
+export default function Home() {
+  return (
+    <>
+	<div style={{ margin: "1%" }}>
+      <Carousel
+	  	arrows={false}
+		swipeable={false}
+		draggable={false}
+		showDots={false}
+		responsive={responsive}
+		ssr={true} // means to render carousel on server-side.
+		infinite={false}
+		autoPlay={false}
+		customTransition="transform 500ms ease-in-out"
+		transitionDuration={500}
+		containerClass="carousel-container"
+		removeArrowOnDeviceType={["tablet", "mobile"]}
+		deviceType="desktop"
+		dotListClass="custom-dot-list-style"
+		itemClass="carousel-item-padding-40-px"
+		slidesToSlide={1}
+		>
+        <div><ProjectEntry title='Disney Magic Kingdoms' type='Clay Software Corporation' tech='UE5 / C++' years='2024 - Present' shortName='dmk' largeImage={true} /></div>
+        <div><ProjectEntry title='Disney Magic Kingdoms' type='Gameloft Toronto' tech='C++' years='2019 - 2024' shortName='dmk' largeImage={true} /></div>
+      </Carousel>
+	  </div>
+    </>
+  );
+}
