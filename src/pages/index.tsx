@@ -38,7 +38,10 @@ export default function Home() {
       <br/>
       <h1 className='section-header' style={{ margin: "0.5%" }}>Personal Projects</h1>
       <ProjectCarousel />
-      <Projects />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </>
   );
 }
