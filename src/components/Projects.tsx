@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import ProjectEntry from './ProjectEntry';
 
 interface SectionProps{
 	title: string;
@@ -10,32 +11,6 @@ interface SectionProps{
 function SectionHeader({title}: SectionProps){
 	return(
 		<h1 className='section-header'>{title}</h1>
-	);
-}
-
-interface ProjectProps{
-	title: string;
-	type: string;
-	tech: string;
-	years: string;
-	shortName: string;
-}
-
-function ProjectEntry({ title, type, tech, years, shortName }: ProjectProps){
-	const articleLink = 'projects/' + shortName;
-	const imageName = '/' + shortName + '.png';
-
-	return(
-		<div className='project-container'>
-			<Link href={articleLink}>
-				<Image src={imageName} width={600} height={400} alt={title} />
-				<div className='project-text'>
-					<h2>{type}</h2>
-					<h2>{tech}</h2>
-					<h2>{years}</h2>
-				</div>
-			</Link>
-		</div>
 	);
 }
 
