@@ -33,6 +33,7 @@ export default function Home() {
       <title>{ TITLE }</title>
     </Helmet>
       <Navbar />
+      <h1 className='section-header' style={{ margin: "0.5%" }}>Professional Experience</h1>
       <HeroCarousel />
       <br/>
       <h1 className='section-header' style={{ margin: "0.5%" }}>Personal Projects</h1>
