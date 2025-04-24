@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-size: x-large;
+}
+
+h2{
+  font-size: large;
+}
+
+a:link {
+  text-decoration: underline;
+}
+
+.test{
+  max-width: 100%;
+}
+
+.section-header{
+  flex: 1 1 100%; /* This forces the item to occupy the entire row */
+  padding: 15px;
+  font-size: x-large;
+}
+
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 0px;
+  padding: 2%;
+}
+
+.project-container{
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  flex: 1 1 32%;
+  margin: 0;
+  padding: 5px;
+  justify-items: center;
+}
+
+.project-container:hover{
+  filter: drop-shadow(0px 0px 6px white);
+}
+
+.project-container .project-text{
+  justify-self: center;
+  position: absolute;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+  margin-left: clamp(0.75rem, 0.85vw, 2rem);
+  margin-bottom: clamp(0.75rem, 0.85vw, 2rem);
+  left: 0px;
+  bottom: 0px;
+  filter: drop-shadow(0px 0px 4px black);
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+}
+
+.article-content{
+  justify-self: center;
+  border-radius: 15px;
+  padding: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: left;
+  min-width: none;
+  max-width: 620px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1%;
+}
+
+.markdown-container p {
+  margin-bottom: 1.5em;
+}
+
+.markdown-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  padding-bottom: 1.5em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  body {
+    background-image: url('/background-light.png');
+    background-color: #ffffff;
+  }
+
+  .navbar {
+    background-color: rgba(200, 200, 200, 0.5);
+  }
+
+  .project-container:hover{
+    filter: drop-shadow(0px 0px 6px black);
+  }
+
+  .article-content {
+    background-color: rgba(255, 255, 255, 1.0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  body {
+    background-image: url('/background-blur.png');
+    background-color: #ffffff;
+  }
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .project-container:hover{
+    filter: drop-shadow(0px 0px 6px white);
+  }
+
+  .article-content {
+    background-color: rgba(0, 0, 0, 0.52);
+  }
+}
