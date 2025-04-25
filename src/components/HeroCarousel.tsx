@@ -32,8 +32,8 @@ export default function HeroCarousel(){
 		dotListClass="custom-dot-list-style"
 		itemClass="carousel-item-padding-40-px"
 		>
-        <div><ProjectEntry title='Clay Software Corporation' type='Clay Software Corporation' tech='UE5 / C++' years='2024 - Present' shortName='clay' priority={true} /></div>
-        <div><ProjectEntry title='Disney Magic Kingdoms' type='Gameloft Toronto' tech='C++' years='2019 - 2024' shortName='dmk' /></div>
+        <div><ProjectEntry title='Clay Software Corporation' type='Clay Software Corporation' tech='Unreal Engine Software Developer' years='2024 - Present' shortName='clay' priority={true} /></div>
+        <div><ProjectEntry title='Disney Magic Kingdoms' type='Gameloft Toronto' tech='Programmer (C++)' years='2019 - 2024' shortName='dmk' /></div>
       </Carousel>
 	  </div>
     </>
