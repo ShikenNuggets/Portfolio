@@ -116,6 +116,8 @@ a:link {
   padding-bottom: 1.5em;
 }
 
+img[alt=md-image] { width: 250px; height: auto; }
+
 @media (prefers-color-scheme: light) {
   :root {
     --background: #ffffff;
