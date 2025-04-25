@@ -4,9 +4,9 @@
 **Primary Role:** Lead Engine Programmer / Project Manager
 **Tech:** C++ / OpenGL / Git
 
-As my Capstone Project for my Game Programming education at Humber College, I worked with three other students to create a custom game engine, called the *PizzaBox Game Engine*. We then used this engine to create a 3D physics-based platformer called *Roof Toppers*. My work on this project got me 99% in the Capstone course, and I ended my Game Programming Advanced Diploma with a 90.65 GPA.
-
 https://www.youtube.com/watch?v=qjCcFVoc_Gg
+
+As my Capstone Project for my Game Programming education at Humber College, I worked with three other students to create a custom game engine, called the *PizzaBox Game Engine*. We then used this engine to create a 3D physics-based platformer called *Roof Toppers*. My work on this project got me 99% in the Capstone course, and I ended my Game Programming Advanced Diploma with a 90.65 GPA.
 
 When we originally started creating the engine, we weren’t entirely sure what kind of game we were going to make with it, so we tried to do things as generically as possible to allow us to theoretically to make any kind of game. A lot of our high-level architecture decisions were based on Unity due to our familiarity with it.
 

@@ -6,6 +6,8 @@
 **Tech (Additional):** Unity / C# / Git
 **Reason for Ending:** Coroprate Restructuring
 
+https://www.youtube.com/watch?v=DsvEJKTwelc
+
 My primary responsibilities on DMK included:
 * Implementing data tracking functionality in C++ for the iOS version.
 * Ensured tracking was done correctly and on-schedule for over 50 major updates and dozens of hotfixes.
