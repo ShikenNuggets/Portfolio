@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -27,11 +26,12 @@ const inter = Inter({
 const TITLE = 'Games by Carter';
 
 export default function Home() {
+  useEffect(() => {
+    document.title = TITLE;
+  }, []);
+
   return (
     <>
-    <Helmet>
-      <title>{ TITLE }</title>
-    </Helmet>
       <Navbar />
       <h1 className='section-header' style={{ margin: "0.5%" }}>Professional Experience</h1>
       <HeroCarousel />

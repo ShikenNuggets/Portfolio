@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
 import ProjectContent from "@/components/ProjectContent";
@@ -17,11 +16,12 @@ const TITLE = ProjectName + ' - Games by Carter';
 export const getStaticProps = getStaticPropsFromFile('content/java-chess.md');
 
 export default function JavaChess({ fileContent }: { fileContent: string }) {
+	useEffect(() => {
+		document.title = TITLE;
+	}, []);
+
 	return (
 		<>
-		<Helmet>
-			<title>{ TITLE }</title>
-		</Helmet>
 		<Navbar />
 		<div>
 		<ProjectContent title={ProjectName} markdownContent={fileContent} />

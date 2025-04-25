@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
@@ -17,11 +17,12 @@ const TITLE = 'Weird Hamster Ball Game - Games by Carter';
 export const getStaticProps = getStaticPropsFromFile('content/whbg.md');
 
 export default function WHBG({ fileContent }: { fileContent: string }) {
+	useEffect(() => {
+		document.title = TITLE;
+	}, []);
+
 	return (
 		<>
-		<Helmet>
-			<title>{ TITLE }</title>
-		</Helmet>
 		<Navbar />
 		<ProjectContent title="Weird Hamster Ball Game" markdownContent={fileContent} />
 		</>

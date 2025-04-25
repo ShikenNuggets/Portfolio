@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
@@ -17,11 +17,12 @@ const TITLE = ProjectName + ' - Games by Carter';
 export const getStaticProps = getStaticPropsFromFile('content/splinter-gear.md');
 
 export default function SplinterGear({ fileContent }: { fileContent: string }) {
+	useEffect(() => {
+		document.title = TITLE;
+	}, []);
+
 	return (
 		<>
-		<Helmet>
-			<title>{ TITLE }</title>
-		</Helmet>
 		<Navbar />
 		<div>
 		<ProjectContent title={ProjectName} markdownContent={fileContent} />
