@@ -2,6 +2,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ProjectEntry from "./ProjectEntry";
+import ProjectModal from "./ProjectModal";
+import { useState } from "react";
 
 const responsive = {
 	desktop: {
@@ -15,9 +17,26 @@ const responsive = {
 };
 
 export default function ProjectCarousel(){
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState<string | null>(null);
+
+  const openModal = (shortName: string) => {
+	console.log("Open Modal!");
+	setActiveProject(shortName);
+	setModalOpen(true);
+  }
+
+  const closeModal = () => {
+	console.log("Close Modal!");
+	setActiveProject(null);
+	setModalOpen(false);
+  }
+
   return (
     <>
 	<div style={{ margin: "1%" }}>
+		<ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' priority onClick={openModal} />
+
       <Carousel
 	  	arrows={true}
 		swipeable={false}
@@ -41,6 +60,9 @@ export default function ProjectCarousel(){
         <ProjectEntry title='Batbot' type='Discord Bot' tech='C#' years='2019-2022' shortName='batbot' />
       </Carousel>
 	  </div>
+	  {modalOpen && activeProject && (
+	  	<ProjectModal shortName={activeProject} onClose={closeModal} />
+	  )}
     </>
   );
 }

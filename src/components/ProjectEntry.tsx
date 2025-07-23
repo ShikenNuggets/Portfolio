@@ -9,23 +9,27 @@ interface ProjectProps{
 	tech: string;
 	years: string;
 	shortName: string;
+	onClick: (shortName: string) => void;
 	priority?: boolean;
 }
 
-function ProjectEntry({ title, type, tech, years, shortName, priority = false }: ProjectProps){
-	const articleLink = 'projects/' + shortName;
+function ProjectEntry({ title, type, tech, years, shortName, onClick, priority = false }: ProjectProps){
 	const imageName = '/' + shortName + '.png';
 
+	const handleClick = (e: React.MouseEvent) => {
+		console.log("OnClick!");
+		e.stopPropagation();
+		onClick?.(shortName);
+	}
+
 	return(
-		<div className='project-container'>
-			<Link href={articleLink}>
-				<Image src={imageName} width={1200} height={800} alt={title} priority={priority} />
-				<div className='project-text'>
-					<h2>{type}</h2>
-					<h2>{tech}</h2>
-					<h2>{years}</h2>
-				</div>
-			</Link>
+		<div className='project-container' onClick={handleClick}>
+			<Image src={imageName} width={1200} height={800} alt={title} priority={priority} />
+			<div className='project-text'>
+				<h2>{type}</h2>
+				<h2>{tech}</h2>
+				<h2>{years}</h2>
+			</div>
 		</div>
 	);
 }
