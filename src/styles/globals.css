@@ -118,6 +118,29 @@ a:link {
 
 img[alt=md-image] { width: 250px; height: auto; }
 
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content{
+  background: black;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --background: #ffffff;
