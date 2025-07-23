@@ -15,4 +15,21 @@ export const getStaticFileContents = (filePath: string): GetStaticProps => {
 	}
 }
 
+export function LoadAllMarkdowns(){
+	const contentDir = path.join(process.cwd(), 'content');
+	const files = fs.readdirSync(contentDir);
+
+	const markdownMap: Record<string, string> = {}
+
+	files.forEach((file => {
+		if (file.endsWith(".md")){
+			const slug = file.replace(/\.md$/, '');
+			const content = fs.readFileSync(path.join(contentDir, file), 'utf-8');
+			markdownMap[slug] = content;
+		}
+	}));
+
+	return markdownMap;
+}
+
 export default getStaticFileContents;
