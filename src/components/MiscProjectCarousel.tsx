@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import ProjectEntry from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
 import { useState } from "react";
+import { title } from "process";
 
 const responsive = {
 	desktop: {
@@ -24,10 +25,12 @@ type MiscrProjectCarouselProps = {
 export default function MiscProjectCarousel({ projectName, markdownContents} : MiscrProjectCarouselProps){
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProject, setActiveProject] = useState<string | null>(null);
+  const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
 
-  const openModal = (shortName: string) => {
+  const openModal = (title: string, shortName: string) => {
 	console.log("Open Modal!");
 	setActiveProject(shortName);
+	setActiveProjectTitle(title);
 	setModalOpen(true);
   }
 
@@ -62,14 +65,14 @@ export default function MiscProjectCarousel({ projectName, markdownContents} : M
 		itemClass="carousel-item-padding-40-px"
 		slidesToSlide={1}
 		>
-        <ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' />
-        <ProjectEntry title='Arkham Speedrun Route Tracker' type='Desktop Application' tech='C#' years='2020-2025' shortName='routetracker' />
-        <ProjectEntry title='SpeedArchive' type='Console Utility' tech='C#' years='2019-2022' shortName='speedarchive' />
-        <ProjectEntry title='Batbot' type='Discord Bot' tech='C#' years='2019-2022' shortName='batbot' />
+        <ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' onClick={openModal} />
+        <ProjectEntry title='Arkham Speedrun Route Tracker' type='Desktop Application' tech='C#' years='2020-2025' shortName='routetracker' onClick={openModal} />
+        <ProjectEntry title='SpeedArchive' type='Console Utility' tech='C#' years='2019-2022' shortName='speedarchive' onClick={openModal} />
+        <ProjectEntry title='Batbot' type='Discord Bot' tech='C#' years='2019-2022' shortName='batbot' onClick={openModal} />
       </Carousel>
 	  </div>
-	  {modalOpen && activeProject && (
-	  	<ProjectModal shortName={activeProject} onClose={closeModal} title={projectName} markdownContent={markdownContents[activeProject]} />
+	  {modalOpen && activeProject && activeTitle && (
+	  	<ProjectModal shortName={activeProject} onClose={closeModal} title={activeTitle} markdownContent={markdownContents[activeProject]} />
 	  )}
     </>
   );

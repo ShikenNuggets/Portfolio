@@ -9,7 +9,7 @@ interface ProjectProps{
 	tech: string;
 	years: string;
 	shortName: string;
-	onClick: (shortName: string) => void;
+	onClick: (title: string, shortName: string) => void;
 	priority?: boolean;
 }
 
@@ -19,7 +19,7 @@ function ProjectEntry({ title, type, tech, years, shortName, onClick, priority =
 	const handleClick = (e: React.MouseEvent) => {
 		console.log("OnClick!");
 		e.stopPropagation();
-		onClick?.(shortName);
+		onClick?.(title, shortName);
 	}
 
 	return(
