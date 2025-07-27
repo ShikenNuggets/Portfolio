@@ -16,7 +16,12 @@ const responsive = {
 	}
 };
 
-export default function ProjectCarousel(){
+type MiscrProjectCarouselProps = {
+	projectName: string;
+	markdownContents: Record<string, string>;
+}
+
+export default function MiscProjectCarousel({ projectName, markdownContents} : MiscrProjectCarouselProps){
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
@@ -31,11 +36,14 @@ export default function ProjectCarousel(){
 	setActiveProject(null);
 	setModalOpen(false);
   }
+  
+  if (markdownContents == null){
+	console.log("markdownContents is undefined!");
+  }
 
   return (
     <>
 	<div style={{ margin: "1%" }}>
-		<ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' priority onClick={openModal} />
 
       <Carousel
 	  	arrows={true}
@@ -61,7 +69,7 @@ export default function ProjectCarousel(){
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && (
-	  	<ProjectModal shortName={activeProject} onClose={closeModal} />
+	  	<ProjectModal shortName={activeProject} onClose={closeModal} title={projectName} markdownContent={markdownContents[activeProject]} />
 	  )}
     </>
   );

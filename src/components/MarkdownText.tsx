@@ -18,7 +18,7 @@ const YouTubeEmbed = (url: string) => {
 	return null;
 };
 
-const MarkdownText: React.FC<{ markdownText: string}> = ({ markdownText }) => {
+const MarkdownText: React.FC<{ markdownText: string | undefined}> = ({ markdownText }) => {
 	return (
 		<div className="markdown-container">
 		  <ReactMarkdown

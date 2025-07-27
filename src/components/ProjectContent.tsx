@@ -4,7 +4,7 @@ import MarkdownText from './MarkdownText';
 
 interface ProjectContentProps{
 	title: string;
-	markdownContent: string;
+	markdownContent: string | undefined;
 }
 
 const ProjectContent = ({title, markdownContent}: ProjectContentProps) => {
