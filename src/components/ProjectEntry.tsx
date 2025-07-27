@@ -9,7 +9,7 @@ interface ProjectProps{
 	tech: string;
 	years: string;
 	shortName: string;
-	onClick: (title: string, shortName: string) => void;
+	onClick?: (title: string, shortName: string) => void;
 	priority?: boolean;
 }
 
