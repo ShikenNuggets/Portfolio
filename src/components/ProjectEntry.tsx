@@ -17,7 +17,6 @@ function ProjectEntry({ title, type, tech, years, shortName, onClick, priority =
 	const imageName = '/' + shortName + '.png';
 
 	const handleClick = (e: React.MouseEvent) => {
-		console.log("OnClick!");
 		e.stopPropagation();
 		onClick?.(title, shortName);
 	}

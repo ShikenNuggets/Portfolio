@@ -54,13 +54,13 @@ const Home: React.FC<HomePageProps> = ({ markdowns }) => {
     <>
       <Navbar />
       <h1 className='section-header' style={{ margin: "0.5%" }}>Professional Experience</h1>
-      <HeroCarousel />
+      <HeroCarousel markdownContents={markdowns} />
       <br/>
       <h1 className='section-header' style={{ margin: "0.5%" }}>Game Projects</h1>
-      <ProjectCarousel />
+      <ProjectCarousel markdownContents={markdowns} />
       <br/>
       <h1 className='section-header' style={{ margin: "0.5%" }}>Other Projects</h1>
-      <MiscProjectCarousel projectName="Clay Software Corporation" markdownContents={markdowns} />
+      <MiscProjectCarousel markdownContents={markdowns} />
       <br/>
       <br/>
       <br/>

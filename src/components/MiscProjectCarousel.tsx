@@ -18,24 +18,21 @@ const responsive = {
 };
 
 type MiscrProjectCarouselProps = {
-	projectName: string;
 	markdownContents: Record<string, string>;
 }
 
-export default function MiscProjectCarousel({ projectName, markdownContents} : MiscrProjectCarouselProps){
+export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCarouselProps){
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
 
   const openModal = (title: string, shortName: string) => {
-	console.log("Open Modal!");
 	setActiveProject(shortName);
 	setActiveProjectTitle(title);
 	setModalOpen(true);
   }
 
   const closeModal = () => {
-	console.log("Close Modal!");
 	setActiveProject(null);
 	setModalOpen(false);
   }
