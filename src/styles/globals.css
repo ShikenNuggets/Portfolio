@@ -136,7 +136,8 @@ img[alt=md-image] { width: 250px; height: auto; }
   background: black;
   padding: 2rem;
   border-radius: 8px;
-  width: 40%;
+  min-width: 10%;
+  max-width: 90%;
   max-height: 80%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   overflow-x: auto;
