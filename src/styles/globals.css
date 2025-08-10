@@ -133,6 +133,7 @@ img[alt=md-image] { width: 250px; height: auto; }
 }
 
 .modal-content{
+  position: relative;
   background: black;
   padding: 2rem;
   border-radius: 8px;
@@ -142,6 +143,23 @@ img[alt=md-image] { width: 250px; height: auto; }
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   overflow-x: auto;
   overflow-y: auto;
+}
+
+.modal-close-button{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.modal-close-button:hover{
+  color: #ff4d4d;
+  transform: scale(1.25);
 }
 
 @media (prefers-color-scheme: light) {
