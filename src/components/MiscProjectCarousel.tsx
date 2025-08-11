@@ -43,7 +43,7 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 
   return (
     <>
-	<div style={{ margin: "1%" }}>
+	<div style={{ position: "relative", zIndex: 1, margin: "1%" }}>
 
       <Carousel
 	  	arrows={true}
