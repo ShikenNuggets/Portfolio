@@ -60,8 +60,8 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 		>
         <ProjectEntry title='Weird Hamster Ball Game' type='Game Jam' tech='C++' years='2024' shortName='whbg' onClick={openModal} />
 		<ProjectEntry title='Secret Identity' type='Personal Project' tech='UE5 / C++' years='2024' shortName='secret-identity' onClick={openModal} />
-		<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022-2024' shortName='gadget' onClick={openModal} />
-		<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017-2019' shortName='roof-toppers' onClick={openModal} />
+		<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022 - 2024' shortName='gadget' onClick={openModal} />
+		<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017 - 2019' shortName='roof-toppers' onClick={openModal} />
 		<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' shortName='splinter-gear' onClick={openModal} />
 		{/* <ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' shortName='java-chess' onClick={openModal} /> */}
 		<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' shortName='batman' onClick={openModal} />
