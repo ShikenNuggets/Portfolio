@@ -11,7 +11,10 @@ const YouTubeEmbed = (url: string) => {
 		const videoURL = 'https://www.youtube.com/embed/' + videoId;
 
 		return (
-			<iframe width="560" height="315" src={videoURL} />
+			<figure className='responsive-video'>
+				<iframe src={videoURL} />
+			</figure>
+			
 		);
 	}
 	
