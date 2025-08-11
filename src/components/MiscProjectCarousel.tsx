@@ -63,8 +63,8 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 		slidesToSlide={1}
 		>
         <ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' onClick={openModal} />
-        <ProjectEntry title='Arkham Speedrun Route Tracker' type='Desktop Application' tech='C#' years='2020-2025' shortName='routetracker' onClick={openModal} />
-        <ProjectEntry title='SpeedArchive' type='Console Utility' tech='C#' years='2019-2022' shortName='speedarchive' onClick={openModal} />
+        <ProjectEntry title='Arkham Speedrun Route Tracker' type='Desktop Application' tech='C#' years='2020-2025' shortName='route-tracker' onClick={openModal} />
+        <ProjectEntry title='SpeedArchive' type='Console Utility' tech='C#' years='2019-2022' shortName='speed-archive' onClick={openModal} />
         <ProjectEntry title='Batbot' type='Discord Bot' tech='C#' years='2019-2022' shortName='batbot' onClick={openModal} />
       </Carousel>
 	  </div>
