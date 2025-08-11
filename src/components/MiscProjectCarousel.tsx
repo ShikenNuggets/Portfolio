@@ -47,7 +47,7 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 
       <Carousel
 	  	arrows={true}
-		swipeable={false}
+		swipeable={true}
 		draggable={false}
 		showDots={false}
 		responsive={responsive}

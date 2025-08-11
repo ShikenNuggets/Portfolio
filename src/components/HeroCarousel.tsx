@@ -41,7 +41,7 @@ export default function HeroCarousel({ markdownContents }: HeroCarouselProps){
 	<div style={{ margin: "1%" }}>
       <Carousel
 	  	arrows={true}
-		swipeable={false}
+		swipeable={true}
 		draggable={false}
 		showDots={false}
 		responsive={responsive}

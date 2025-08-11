@@ -43,7 +43,7 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 	<div style={{ margin: "1%" }}>
       <Carousel
 	  	arrows={true}
-		swipeable={false}
+		swipeable={true}
 		draggable={false}
 		showDots={false}
 		responsive={responsive}
