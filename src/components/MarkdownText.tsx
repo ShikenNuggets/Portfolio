@@ -38,6 +38,24 @@ const MarkdownText: React.FC<{ markdownText: string | undefined}> = ({ markdownT
 				}
 				
 			  },
+
+			  // Custom renderer for paragraphs
+			  p: ({ node, children }) => {
+				const child = node?.children?.[0];
+
+				// Ensure the child exists and is an anchor element
+				if (child && child.type === 'element' && child.tagName === 'a') {
+					const hrefRaw = child.properties?.href;
+
+					// Ensure href is a string
+					if (typeof hrefRaw === 'string' && hrefRaw.includes('youtube.com/watch')) {
+						return <>{YouTubeEmbed(hrefRaw)}</>; // No <p> wrapper
+					}
+				}
+
+				// Normal paragraph
+				return <p>{children}</p>;
+			  }
 			}}
 		  >
 			{markdownText}
