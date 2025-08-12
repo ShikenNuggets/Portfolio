@@ -1,12 +1,12 @@
+**Role:** Programmer (Tech Team - Data Tracking)
 **Team:** [Gameloft Toronto](https://www.gameloft.com/gameloft-studios/toronto)
 **Type:** Freemium Tycoon (Commercial)
 **Timeline:** July 2019 - April 2024 (4 years, 10 months)
-**Primary Role:** Programmer (Tech Team - Data Tracking)
 **Tech (Primary):** C++ / SVN
 **Tech (Additional):** Unity / C# / Git
-**Reason for Ending:** Coroprate Restructuring
+**Reason for Ending:** Corporate Restructuring
 
-https://www.youtube.com/watch?v=DsvEJKTwelc
+https://www.youtube.com/watch?v=nFoNj3yuJG4
 
 My primary responsibilities on DMK included:
 * Implementing data tracking functionality in C++ for the iOS version.

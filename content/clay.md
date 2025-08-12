@@ -1,7 +1,7 @@
+**Role:** Unreal Engine Software Developer
 **Team:** [Clay Software Corporation](https://www.launchclay.com/)
 **Type:** Real Estate Showcase Software
 **Timeline:** Oct 2024 - Present
-**Primary Role:** Unreal Engine Software Developer
 **Tech:** UE5 / C++ / Git
 
 Primary Responsibilities:
