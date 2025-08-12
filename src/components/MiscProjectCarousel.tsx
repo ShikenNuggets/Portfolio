@@ -36,10 +36,6 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 	setActiveProject(null);
 	setModalOpen(false);
   }
-  
-  if (markdownContents == null){
-	console.log("markdownContents is undefined!");
-  }
 
   return (
     <>

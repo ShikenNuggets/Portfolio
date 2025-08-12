@@ -48,8 +48,6 @@ const Home: React.FC<HomePageProps> = ({ markdowns }) => {
     document.title = TITLE;
   }, []);
 
-  console.log('markdowns contains key "clay":', 'clay' in markdowns);
-
   return (
     <>
       <Navbar />
