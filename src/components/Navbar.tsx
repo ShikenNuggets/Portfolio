@@ -22,7 +22,7 @@ const Navbar = () => {
 				</Link>
 				<ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
 					<li><h1><Link href="/" style={{ textDecoration: 'none' }}>Home</Link></h1></li>
-					<li><h1><a href="/about" style={{ textDecoration: 'none' }}>About Me</a></h1></li>
+					<li><h1><Link href="/about" style={{ textDecoration: 'none' }}>About Me</Link></h1></li>
 				</ul>
 
 				<div>
