@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 
 import Navbar from "@/components/Navbar";
 import MarkdownText from "@/components/MarkdownText";
