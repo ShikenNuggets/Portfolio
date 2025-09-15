@@ -1,8 +1,19 @@
 'use client'
 import React from 'react'
+import { useState } from "react";
 import Link from 'next/link'
+import ContactModal from './ContactModal'
 
 const Navbar = () => {
+	const [modalOpen, setModalOpen] = useState(false);
+	const openModal = () => {
+		setModalOpen(true);
+	}
+	
+	const closeModal = () => {
+		setModalOpen(false);
+	}
+
 	return (
 		<>
 			<nav className='w-full fixed-top px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 navbar'>
@@ -15,8 +26,11 @@ const Navbar = () => {
 				</ul>
 
 				<div>
-					<a href='#contact' className='hidden lg:flex items-cneter gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4' style={{ textDecoration: 'none' }}><h1>Contact</h1></a>
+					<a className='navbar-contact-modal hidden lg:flex items-cneter gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4' style={{ textDecoration: 'none' }} onClick={openModal}><h1>Contact</h1></a>
 				</div>
+				{modalOpen && true && true && (
+					<ContactModal onClose={closeModal} />
+				)}
 			</nav>
 		</>
 	)
