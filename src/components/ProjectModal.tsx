@@ -8,7 +8,7 @@ interface ProjectModalProps{
 	markdownContent: string | undefined;
 }
 
-const ProjectModal : React.FC<ProjectModalProps> = ({ shortName, onClose, title, markdownContent }) => {
+const ProjectModal : React.FC<ProjectModalProps> = ({ onClose, title, markdownContent }) => {
 	return (
 		<>
 		<div className='modal-overlay' onClick={onClose}>
