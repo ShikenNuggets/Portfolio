@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ProjectEntry from "./ProjectEntry";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectModal from "./ProjectModal";
 
 const responsive = {
@@ -16,25 +16,54 @@ const responsive = {
 	}
 };
 
+const projectTitles: Record<string, string> = {
+	clay: "Clay Software Corporation",
+	dmk: "Disney Magic Kingdoms"
+};
+
 type HeroCarouselProps = {
 	markdownContents: Record<string, string>;
-}
+};
 
 export default function HeroCarousel({ markdownContents }: HeroCarouselProps){
 	const [modalOpen, setModalOpen] = useState(false);
 	const [activeProject, setActiveProject] = useState<string | null>(null);
 	const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
-		
+
+	useEffect(() => {
+		const handleHash = () => {
+			const hash = window.location.hash.replace("#", "");
+
+			if (hash && markdownContents[hash]) {
+				setActiveProject(hash);
+				setActiveProjectTitle(projectTitles[hash]);
+				setModalOpen(true);
+			} else {
+				// No matching hash → ensure modal is closed
+				setModalOpen(false);
+				setActiveProject(null);
+				setActiveProjectTitle(null);
+			}
+		};
+
+		handleHash(); // run once on load
+		window.addEventListener("hashchange", handleHash);
+		return () => window.removeEventListener("hashchange", handleHash);
+	}, [markdownContents]);
+
 	const openModal = (title: string, shortName: string) => {
+		window.location.hash = shortName;
 		setActiveProject(shortName);
 		setActiveProjectTitle(title);
 		setModalOpen(true);
-	}
-		
+	};
+	
 	const closeModal = () => {
+		history.replaceState(null, "", " ");
 		setActiveProject(null);
+		setActiveProjectTitle(null);
 		setModalOpen(false);
-	}
+	};
 
   return (
     <>
