@@ -3,8 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import ProjectEntry from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
-import { useState } from "react";
-import { title } from "process";
+import { useState, useEffect } from "react";
 
 const responsive = {
 	desktop: {
@@ -17,6 +16,13 @@ const responsive = {
 	}
 };
 
+const projectTitles: Record<string, string> = {
+	"portfolio": "Portfolio",
+	"route-tracker": "Arkham Speedrun Route Tracker",
+	"speed-archive": "SpeedArchive",
+	"batbot": "Batbot"
+}
+
 type MiscrProjectCarouselProps = {
 	markdownContents: Record<string, string>;
 }
@@ -26,14 +32,36 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
 
+  useEffect(() => {
+	const handleHash = () => {
+		const hash = window.location.hash.replace("#", "");
+		if (hash && markdownContents[hash]){
+			setActiveProject(hash);
+			setActiveProjectTitle(projectTitles[hash]);
+			setModalOpen(true);
+		}else{
+			setModalOpen(false);
+			setActiveProject(null);
+			setActiveProjectTitle(null);
+		}
+	};
+
+	handleHash();
+	window.addEventListener("hashchange", handleHash);
+	return () => window.removeEventListener("hashchange", handleHash);
+  }, [markdownContents]);
+
   const openModal = (title: string, shortName: string) => {
+	window.location.hash = shortName;
 	setActiveProject(shortName);
 	setActiveProjectTitle(title);
 	setModalOpen(true);
   }
 
   const closeModal = () => {
+	history.replaceState(null, "", " ");
 	setActiveProject(null);
+	setActiveProjectTitle(null);
 	setModalOpen(false);
   }
 

@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ProjectEntry from "./ProjectEntry";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectModal from "./ProjectModal";
 
 const responsive = {
@@ -16,6 +16,19 @@ const responsive = {
 	}
 };
 
+const projectTitles: Record<string, string> = {
+	"whbg": "Weird Hamster Ball Game",
+	"secret-identity": "Secret Identity",
+	"gadget": "Gadget Engine",
+	"roof-toppers": "Roof Toppers",
+	"splinter-gear": "Splinter Gear",
+	"java-chess": "Java Chess",
+	"batman": "Batman NES Remake",
+	"peggle": "Peggle Clone",
+	"js-fighter": "Javascript Fighter",
+	"battleship": "Battleship"
+}
+
 type ProjectCarouselProps = {
 	markdownContents: Record<string, string>;
 }
@@ -25,14 +38,36 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 	const [activeProject, setActiveProject] = useState<string | null>(null);
 	const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
 	
+	useEffect(() => {
+		const handleHash = () => {
+			const hash = window.location.hash.replace("#", "");
+			if (hash && markdownContents[hash]){
+				setActiveProject(hash);
+				setActiveProjectTitle(projectTitles[hash]);
+				setModalOpen(true);
+			}else{
+				setModalOpen(false);
+				setActiveProject(null);
+				setActiveProjectTitle(null);
+			}
+		};
+
+		handleHash();
+		window.addEventListener("hashchange", handleHash);
+		return () => window.removeEventListener("hashchange", handleHash);
+	}, [markdownContents]);
+
 	const openModal = (title: string, shortName: string) => {
+		window.location.hash = shortName;
 		setActiveProject(shortName);
 		setActiveProjectTitle(title);
 		setModalOpen(true);
 	}
 	
 	const closeModal = () => {
+		history.replaceState(null, "", " ");
 		setActiveProject(null);
+		setActiveProjectTitle(null);
 		setModalOpen(false);
 	}
 
