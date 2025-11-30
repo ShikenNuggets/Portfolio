@@ -1,8 +1,9 @@
+import { Project } from '@/components/ProjectEntry';
 import { useState, useEffect } from 'react';
 
-type ModalProjects = Record<string, string>;
+type ModalProjects = Record<string, Project>;
 
-export function UseHashModal(projectTitles: ModalProjects){
+export function UseHashModal(projects: ModalProjects){
 	const [modalOpen, setModalOpen] = useState(false);
 	const [activeProject, setActiveProject] = useState<string | null>(null);
 	const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
@@ -10,9 +11,9 @@ export function UseHashModal(projectTitles: ModalProjects){
 	useEffect(() => {
 		const handleHash = () => {
 			const hash = window.location.hash.replace("#", "");
-			if (projectTitles[hash]) {
+			if (projects[hash]) {
 				setActiveProject(hash);
-				setActiveProjectTitle(projectTitles[hash]);
+				setActiveProjectTitle(projects[hash].title);
 				setModalOpen(true);
 			} else {
 				setModalOpen(false);
@@ -24,7 +25,7 @@ export function UseHashModal(projectTitles: ModalProjects){
 		handleHash();
 		window.addEventListener("hashchange", handleHash);
 		return () => window.removeEventListener("hashchange", handleHash);
-	}, [projectTitles]);
+	}, [projects]);
 	
 	const openModal = (title: string, shortName: string) => {
 		window.location.hash = shortName;

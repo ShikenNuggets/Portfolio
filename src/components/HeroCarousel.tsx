@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry from "./ProjectEntry";
+import ProjectEntry, { Project } from "./ProjectEntry";
 import { useState, useEffect } from "react";
 import ProjectModal from "./ProjectModal";
 import { UseHashModal } from "@/utils/UseHashModal";
@@ -17,24 +17,23 @@ const responsive = {
 	}
 };
 
+const projects: Record<string, Project> = {
+	clay: { title: "Clay Software Corporation", type: "Clay Software Corporation", tech: "Unreal Engine Software Developer", years: "2024 - Present" },
+	dmk: { title: "Disney Magic Kingdoms", type: "Gameloft Toront", tech: "Programmer (C++)", years: "2019 - 2024" },
+};
+
 type HeroCarouselProps = {
 	markdownContents: Record<string, string>;
 };
 
 export default function HeroCarousel({ markdownContents }: HeroCarouselProps){
-	const projectTitles: Record<string, string> = {
-		clay: "Clay Software Corporation",
-		dmk: "Disney Magic Kingdoms"
-	};
-
 	const {
 		modalOpen,
 		activeProject,
 		activeTitle,
 		openModal,
 		closeModal
-	} = UseHashModal(projectTitles);
-
+	} = UseHashModal(projects);
 
   return (
     <>
@@ -53,8 +52,8 @@ export default function HeroCarousel({ markdownContents }: HeroCarouselProps){
 		dotListClass="custom-dot-list-style"
 		itemClass="carousel-item-padding-40-px"
 		>
-        <div><ProjectEntry title='Clay Software Corporation' type='Clay Software Corporation' tech='Unreal Engine Software Developer' years='2024 - Present' shortName='clay' onClick={openModal} priority={true} /></div>
-        <div><ProjectEntry title='Disney Magic Kingdoms' type='Gameloft Toronto' tech='Programmer (C++)' years='2019 - 2024' shortName='dmk' onClick={openModal} /></div>
+        <div><ProjectEntry project={projects["clay"]} shortName='clay' onClick={openModal} priority={true} /></div>
+        <div><ProjectEntry project={projects["dmk"]} shortName='dmk' onClick={openModal} /></div>
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (

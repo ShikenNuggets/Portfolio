@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry from "./ProjectEntry";
+import ProjectEntry, { Project } from "./ProjectEntry";
 import { useEffect, useState } from "react";
 import ProjectModal from "./ProjectModal";
 
@@ -18,17 +18,17 @@ const responsive = {
 	}
 };
 
-const projectTitles: Record<string, string> = {
-	"whbg": "Weird Hamster Ball Game",
-	"secret-identity": "Secret Identity",
-	"gadget": "Gadget Engine",
-	"roof-toppers": "Roof Toppers",
-	"splinter-gear": "Splinter Gear",
-	"java-chess": "Java Chess",
-	"batman": "Batman NES Remake",
-	"peggle": "Peggle Clone",
-	"js-fighter": "Javascript Fighter",
-	"battleship": "Battleship"
+const projects: Record<string, Project> = {
+	"whbg": { title: "Weird Hamster Ball Game", type: "Game Jam", tech: "C++", years: "2024"},
+	"secret-identity": { title: "Secret Identity", type: "Personal Project", tech: "UE5 / C++", years: "2024" },
+	"gadget": { title: "Gadget Engine", type: "Personal Game Engine", tech: "C++", years: "2022 - 2024" },
+	"roof-toppers": { title: "Roof Toppers / PizzaBox Game Engine", type: "School Project", tech: "C++", years: "2017 - 2019" },
+	"splinter-gear": { title: "Splinter Gear", type: "School Project", tech: "Unity / C#", years: "2017-2018" },
+	"java-chess": { title: "Java Chess", type: "School Project", tech: "Java", years: "2017-2018" },
+	"batman": { title: "Batman NES Remake", type: "School Project", tech: "Unity / C#", years: "2017" },
+	"peggle": { title: "Peggle Clone", type: "School Project", tech: "C++", years: "2017" },
+	"js-fighter": { title: "JavaScript Fighter", type: "School Project", tech: "JavaScript", years: "2017" },
+	"battleship": { title: "Battleship", type: "School Project", tech: "C#", years: "2016" },
 }
 
 type ProjectCarouselProps = {
@@ -42,7 +42,7 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 		activeTitle,
 		openModal,
 		closeModal
-	} = UseHashModal(projectTitles);
+	} = UseHashModal(projects);
 
   return (
     <>
@@ -64,16 +64,16 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 		itemClass="carousel-item-padding-40-px"
 		slidesToSlide={1}
 		>
-        <ProjectEntry title='Weird Hamster Ball Game' type='Game Jam' tech='C++' years='2024' shortName='whbg' onClick={openModal} />
-		<ProjectEntry title='Secret Identity' type='Personal Project' tech='UE5 / C++' years='2024' shortName='secret-identity' onClick={openModal} />
-		<ProjectEntry title='Gadget Engine' type='Personal Game Engine' tech='C++' years='2022 - 2024' shortName='gadget' onClick={openModal} />
-		<ProjectEntry title='Roof Toppers / PizzaBox Game Engine' type='School Project' tech='C++' years='2017 - 2019' shortName='roof-toppers' onClick={openModal} />
-		<ProjectEntry title='Splinter Gear' type='School Project' tech='Unity / C#' years='2017-2018' shortName='splinter-gear' onClick={openModal} />
-		{/* <ProjectEntry title='Java Chess' type='School Project - Chess Game' tech='Java' years='2017-2018' shortName='java-chess' onClick={openModal} /> */}
-		<ProjectEntry title='Batman NES Remake' type='School Project - NES Remake' tech='Unity / C#' years='2017' shortName='batman' onClick={openModal} />
-		{/* <ProjectEntry title='Peggle Clone' type='School Project - Peggle' tech='C++' years='2017' shortName='peggle' onClick={openModal} /> */}
-		{/* <ProjectEntry title='JavaScript Fighter' type='School Project - Street Fighter' tech='JavaScript' years='2017' shortName='js-fighter' onClick={openModal} /> */}
-		{/* <ProjectEntry title='Battleship' type='School Project - Battleship' tech='C#' years='2016' shortName='battleship' onClick={openModal} /> */}
+		<ProjectEntry project={projects["whbg"]} shortName='whbg' onClick={openModal} />
+		<ProjectEntry project={projects["secret-identity"]} shortName='secret-identity' onClick={openModal} />
+		<ProjectEntry project={projects["gadget"]} shortName='gadget' onClick={openModal} />
+		<ProjectEntry project={projects["roof-toppers"]} shortName='roof-toppers' onClick={openModal} />
+		<ProjectEntry project={projects["splinter-gear"]} shortName='splinter-gear' onClick={openModal} />
+		{/* <ProjectEntry project={projects["java-chess"]} shortName='java-chess' onClick={openModal} /> */}
+		<ProjectEntry project={projects["batman"]} shortName='batman' onClick={openModal} />
+		{/* <ProjectEntry project={projects["peggle"]} shortName='peggle' onClick={openModal} /> */}
+		{/* <ProjectEntry project={projects["js-fighter"]} shortName='js-fighter' onClick={openModal} /> */}
+		{/* <ProjectEntry project={projects["battleship"]} shortName='battleship' onClick={openModal} /> */}
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (

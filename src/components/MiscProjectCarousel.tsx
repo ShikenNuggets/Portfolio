@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry from "./ProjectEntry";
+import ProjectEntry, { Project } from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
 import { useState, useEffect } from "react";
 
@@ -18,11 +18,11 @@ const responsive = {
 	}
 };
 
-const projectTitles: Record<string, string> = {
-	"portfolio": "Portfolio",
-	"route-tracker": "Arkham Speedrun Route Tracker",
-	"speed-archive": "SpeedArchive",
-	"batbot": "Batbot"
+const projects: Record<string, Project> = {
+	"portfolio": { title: 'Portfolio', type: 'Web Front-End', tech: 'React/TypeScript', years: '2025' },
+	"route-tracker": { title: 'Arkham Speedrun Route Tracker', type: 'Desktop Application', tech: 'C#', years: '2020 - 2025' },
+	"speed-archive": { title: 'SpeedArchive', type: 'Console Utility', tech: 'C#', years: '2019 - 2022' },
+	"batbot": { title: 'Batbot', type: 'Discord Bot', tech: 'C#', years: '2019 - 2022' },
 }
 
 type MiscrProjectCarouselProps = {
@@ -36,7 +36,7 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 		activeTitle,
 		openModal,
 		closeModal
-	} = UseHashModal(projectTitles);
+	} = UseHashModal(projects);
 
   return (
     <>
@@ -59,10 +59,10 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 		itemClass="carousel-item-padding-40-px"
 		slidesToSlide={1}
 		>
-        <ProjectEntry title='Portfolio' type='Web Front-End' tech='React/TypeScript' years='2025' shortName='portfolio' onClick={openModal} />
-        <ProjectEntry title='Arkham Speedrun Route Tracker' type='Desktop Application' tech='C#' years='2020 - 2025' shortName='route-tracker' onClick={openModal} />
-        <ProjectEntry title='SpeedArchive' type='Console Utility' tech='C#' years='2019 - 2022' shortName='speed-archive' onClick={openModal} />
-        <ProjectEntry title='Batbot' type='Discord Bot' tech='C#' years='2019 - 2022' shortName='batbot' onClick={openModal} />
+        <ProjectEntry project={projects["portfolio"]} shortName='portfolio' onClick={openModal} />
+        <ProjectEntry project={projects["route-tracker"]} shortName='route-tracker' onClick={openModal} />
+        <ProjectEntry project={projects["speed-archive"]} shortName='speed-archive' onClick={openModal} />
+        <ProjectEntry project={projects["batbot"]} shortName='batbot' onClick={openModal} />
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (
