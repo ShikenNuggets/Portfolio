@@ -1,16 +1,34 @@
 'use client'
 import React from 'react'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link'
 import ContactModal from './ContactModal'
 
 const Navbar = () => {
 	const [modalOpen, setModalOpen] = useState(false);
+
+	useEffect(() => {
+		const handleHash = () => {
+			const hash = window.location.hash.replace("#", "");
+			if (hash && hash === "contact"){
+				setModalOpen(true);
+			}else{
+				setModalOpen(false);
+			}
+		};
+
+		handleHash();
+		window.addEventListener("hashchange", handleHash);
+		return () => window.removeEventListener("hashchange", handleHash);
+	});
+
 	const openModal = () => {
+		window.location.hash = "contact";
 		setModalOpen(true);
 	}
 	
 	const closeModal = () => {
+		history.replaceState(null, "", " ");
 		setModalOpen(false);
 	}
 
