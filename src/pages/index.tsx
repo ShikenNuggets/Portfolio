@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -13,14 +13,14 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       markdowns,
-    }
-  }
-}
+    },
+  };
+};
 
-const TITLE = 'Games by Carter';
+const TITLE = "Games by Carter";
 
 interface HomePageProps {
-	markdowns: Record<string, string>
+  markdowns: Record<string, string>;
 }
 
 const Home: React.FC<HomePageProps> = ({ markdowns }) => {
@@ -31,19 +31,25 @@ const Home: React.FC<HomePageProps> = ({ markdowns }) => {
   return (
     <>
       <Navbar />
-      <h1 className='section-header' style={{ margin: "0.5%" }}>Professional Experience</h1>
+      <h1 className="section-header" style={{ margin: "0.5%" }}>
+        Professional Experience
+      </h1>
       <HeroCarousel markdownContents={markdowns} />
-      <br/>
-      <h1 className='section-header' style={{ margin: "0.5%" }}>Game Projects</h1>
+      <br />
+      <h1 className="section-header" style={{ margin: "0.5%" }}>
+        Game Projects
+      </h1>
       <ProjectCarousel markdownContents={markdowns} />
-      <br/>
-      <h1 className='section-header' style={{ margin: "0.5%" }}>Other Projects</h1>
+      <br />
+      <h1 className="section-header" style={{ margin: "0.5%" }}>
+        Other Projects
+      </h1>
       <MiscProjectCarousel markdownContents={markdowns} />
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
     </>
   );
-}
+};
 
 export default Home;
