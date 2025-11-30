@@ -29,7 +29,7 @@ const MarkdownText: React.FC<{ markdownText: string | undefined }> = ({
         remarkPlugins={[remarkGfm, remarkBreaks]}
         components={{
           // Custom renderers for links
-          a: ({ node, ...props }) => {
+          a: ({ ...props }) => {
             const { href } = props;
             // Check if the link is a YouTube URL
             if (href && href.includes("youtube.com/watch")) {
