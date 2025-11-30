@@ -5,6 +5,8 @@ import ProjectEntry from "./ProjectEntry";
 import { useEffect, useState } from "react";
 import ProjectModal from "./ProjectModal";
 
+import { UseHashModal } from "@/utils/UseHashModal";
+
 const responsive = {
 	desktop: {
 	  breakpoint: { max: 3000, min: 1024 },
@@ -34,42 +36,13 @@ type ProjectCarouselProps = {
 }
 
 export default function ProjectCarousel({ markdownContents } : ProjectCarouselProps){
-	const [modalOpen, setModalOpen] = useState(false);
-	const [activeProject, setActiveProject] = useState<string | null>(null);
-	const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);
-	
-	useEffect(() => {
-		const handleHash = () => {
-			const hash = window.location.hash.replace("#", "");
-			if (hash && markdownContents[hash]){
-				setActiveProject(hash);
-				setActiveProjectTitle(projectTitles[hash]);
-				setModalOpen(true);
-			}else{
-				setModalOpen(false);
-				setActiveProject(null);
-				setActiveProjectTitle(null);
-			}
-		};
-
-		handleHash();
-		window.addEventListener("hashchange", handleHash);
-		return () => window.removeEventListener("hashchange", handleHash);
-	}, [markdownContents]);
-
-	const openModal = (title: string, shortName: string) => {
-		window.location.hash = shortName;
-		setActiveProject(shortName);
-		setActiveProjectTitle(title);
-		setModalOpen(true);
-	}
-	
-	const closeModal = () => {
-		history.replaceState(null, "", " ");
-		setActiveProject(null);
-		setActiveProjectTitle(null);
-		setModalOpen(false);
-	}
+	const {
+		modalOpen,
+		activeProject,
+		activeTitle,
+		openModal,
+		closeModal
+	} = UseHashModal(projectTitles);
 
   return (
     <>
