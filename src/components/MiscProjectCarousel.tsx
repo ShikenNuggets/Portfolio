@@ -59,10 +59,11 @@ export default function MiscProjectCarousel({ markdownContents} : MiscrProjectCa
 		itemClass="carousel-item-padding-40-px"
 		slidesToSlide={1}
 		>
-        <ProjectEntry project={projects["portfolio"]} shortName='portfolio' onClick={openModal} />
-        <ProjectEntry project={projects["route-tracker"]} shortName='route-tracker' onClick={openModal} />
-        <ProjectEntry project={projects["speed-archive"]} shortName='speed-archive' onClick={openModal} />
-        <ProjectEntry project={projects["batbot"]} shortName='batbot' onClick={openModal} />
+		{Object.entries(projects).map(([shortName, project]) => (
+			<div key={shortName}>
+				<ProjectEntry project={project} shortName={shortName} onClick={openModal} />
+			</div>
+		))}
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (

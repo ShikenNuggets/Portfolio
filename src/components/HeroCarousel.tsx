@@ -52,8 +52,11 @@ export default function HeroCarousel({ markdownContents }: HeroCarouselProps){
 		dotListClass="custom-dot-list-style"
 		itemClass="carousel-item-padding-40-px"
 		>
-        <div><ProjectEntry project={projects["clay"]} shortName='clay' onClick={openModal} priority={true} /></div>
-        <div><ProjectEntry project={projects["dmk"]} shortName='dmk' onClick={openModal} /></div>
+		{Object.entries(projects).map(([shortName, project], index) => (
+			<div key={shortName}>
+				<ProjectEntry project={project} shortName={shortName} onClick={openModal} priority={index === 0} />
+			</div>
+		))}
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (

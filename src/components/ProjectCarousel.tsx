@@ -24,11 +24,11 @@ const projects: Record<string, Project> = {
 	"gadget": { title: "Gadget Engine", type: "Personal Game Engine", tech: "C++", years: "2022 - 2024" },
 	"roof-toppers": { title: "Roof Toppers / PizzaBox Game Engine", type: "School Project", tech: "C++", years: "2017 - 2019" },
 	"splinter-gear": { title: "Splinter Gear", type: "School Project", tech: "Unity / C#", years: "2017-2018" },
-	"java-chess": { title: "Java Chess", type: "School Project", tech: "Java", years: "2017-2018" },
+	//"java-chess": { title: "Java Chess", type: "School Project", tech: "Java", years: "2017-2018" },
 	"batman": { title: "Batman NES Remake", type: "School Project", tech: "Unity / C#", years: "2017" },
-	"peggle": { title: "Peggle Clone", type: "School Project", tech: "C++", years: "2017" },
-	"js-fighter": { title: "JavaScript Fighter", type: "School Project", tech: "JavaScript", years: "2017" },
-	"battleship": { title: "Battleship", type: "School Project", tech: "C#", years: "2016" },
+	//"peggle": { title: "Peggle Clone", type: "School Project", tech: "C++", years: "2017" },
+	//"js-fighter": { title: "JavaScript Fighter", type: "School Project", tech: "JavaScript", years: "2017" },
+	//"battleship": { title: "Battleship", type: "School Project", tech: "C#", years: "2016" },
 }
 
 type ProjectCarouselProps = {
@@ -64,16 +64,11 @@ export default function ProjectCarousel({ markdownContents } : ProjectCarouselPr
 		itemClass="carousel-item-padding-40-px"
 		slidesToSlide={1}
 		>
-		<ProjectEntry project={projects["whbg"]} shortName='whbg' onClick={openModal} />
-		<ProjectEntry project={projects["secret-identity"]} shortName='secret-identity' onClick={openModal} />
-		<ProjectEntry project={projects["gadget"]} shortName='gadget' onClick={openModal} />
-		<ProjectEntry project={projects["roof-toppers"]} shortName='roof-toppers' onClick={openModal} />
-		<ProjectEntry project={projects["splinter-gear"]} shortName='splinter-gear' onClick={openModal} />
-		{/* <ProjectEntry project={projects["java-chess"]} shortName='java-chess' onClick={openModal} /> */}
-		<ProjectEntry project={projects["batman"]} shortName='batman' onClick={openModal} />
-		{/* <ProjectEntry project={projects["peggle"]} shortName='peggle' onClick={openModal} /> */}
-		{/* <ProjectEntry project={projects["js-fighter"]} shortName='js-fighter' onClick={openModal} /> */}
-		{/* <ProjectEntry project={projects["battleship"]} shortName='battleship' onClick={openModal} /> */}
+		{Object.entries(projects).map(([shortName, project]) => (
+			<div key={shortName}>
+				<ProjectEntry project={project} shortName={shortName} onClick={openModal} />
+			</div>
+		))}
       </Carousel>
 	  </div>
 	  {modalOpen && activeProject && activeTitle && (
