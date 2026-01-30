@@ -28,6 +28,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
           <p>
             <a href="https://github.com/ShikenNuggets">GitHub</a>
           </p>
+          <p>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+          </p>
         </div>
       </div>
     </>
