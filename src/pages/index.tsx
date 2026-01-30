@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useEffect } from "react";
 
 import Navbar from "@/components/Navbar";
@@ -24,12 +25,11 @@ interface HomePageProps {
 }
 
 const Home: React.FC<HomePageProps> = ({ markdowns }) => {
-  useEffect(() => {
-    document.title = TITLE;
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>{TITLE}</title>
+      </Head>
       <Navbar />
       <h1 className="section-header" style={{ margin: "0.5%" }}>
         Professional Experience
