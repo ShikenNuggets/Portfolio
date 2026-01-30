@@ -8,20 +8,13 @@
 
 https://www.youtube.com/watch?v=nFoNj3yuJG4
 
-My primary responsibilities on DMK included:
-* Implementing data tracking functionality in C++ for the iOS version.
-* Ensured tracking was done correctly and on-schedule for over 50 major updates and dozens of hotfixes.
-* Coordinated with the Features team to anticipate tracking work for new features.
-* Coordinated with our business intelligence team, customer care agents, and other data clients to ensure our tracking implementation met their needs.
-* Worked with all teams to ensure that tracking for all new features and content was carefully planned, and not just an afterthought.
-* Found ways to optimize the amount of data we track while still meeting the needs of our data clients.
-* Debugged various issues throughout the codebase, including 10+ year old legacy code.
-* Integrated new external libraries into our game, and updated existing ones.
-
-Additionally, there was also an effort to port the game to Unity/C#, although this was not completed. I worked on that for about a year while continuing to work on the C++ version of the game. In that time, I:
-* Implemented data tracking functionality (some code was directly ported, much was rewritten), and improved Gameloft’s C# tracking SDK.
-* Helped implement new back-end code for the options menu UI.
-* Helped implement and debug anti-hack features.
+Responsibilities:
+* Integrated data tracking functionality in C++ for Disney Magic Kingdoms’ iOS version, measuring usage of major gameplay and e-commerce features with minimal runtime overhead.
+* Coordinated with the Design and Feature teams early in the design process to ensure that new feature implementations were carefully planned with the necessary data tracking in mind.
+* Eliminated redundant or unnecessary data to optimize storage costs, while still meeting our data clients’ needs.
+* Analyzed decade old legacy code to identify and resolve long-standing data tracking issues.
+* Integrated and updated external libraries using Premake.
+* Contributed to an effort to port game code from our custom C++ game engine to Unity/C#.
 
 [iOS App Store](https://apps.apple.com/us/app/disney-magic-kingdoms/id731592936)
 [Google Play Store](https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftDYHM)
