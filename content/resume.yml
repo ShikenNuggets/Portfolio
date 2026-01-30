@@ -1,0 +1,259 @@
+cv:
+  name: "Carter Rennick"
+  location: "Toronto, ON, Canada"
+  email: "carter.rennick@gmail.com"
+  phone: "+16133298544"
+  website: "https://gamesbycarter.vercel.app/"
+  social_networks:
+    - network: "LinkedIn"
+      username: "carterrrennick"
+    - network: "GitHub"
+      username: "ShikenNuggets"
+  sections:
+    Professional Summary:
+      - "Engine & Systems Programmer with over 6 years of experience in games/adjacent roles, specializing in C++, Unreal Engine 5, and proprietary game engines. Strong collaborator with cross-discipline teams. Possesses deep understanding and implementation experience with lower level subsystems such as skeletal animation and rendering. Capable of optimizing production pipelines through procedural automation, and experienced with runtime performance optimization. Adept at eliminating technical debt within large legacy codebases."
+    experience:
+      - company: "Clay Software Corporation"
+        position: "Unreal Engine Software Developer"
+        date:
+        start_date: "2024-10"
+        end_date: "present"
+        location:
+        summary:
+        highlights:
+          - "Architected and maintained standardized C++ plugins used by over a dozen architecture visualization projects, allowing new features and bug fixes to be rolled out more easily and consistently."
+          - "Built custom editor utilities and C++ automation tools to procedurally generate 3D environments based on client-provided 2D floorplans, significantly reducing initial setup time for new projects."
+          - "Designed a self-serve customization system to allow clients to directly modify lighting, materials, and furniture in our 3D environments, without needing to use finite art team resources or rebuild/redeploy applications."
+          - "Created a highly intuitive player navigation system for exploring the digital twins, designed to require minimal setup per-project, and be accessible and easy to learn for users with no real-time video game experience."
+          - "Consolidated disparate prototype functionality from Unreal blueprints into organized, performant, and production-ready C++ code."
+          - "Integrated data tracking functionality to give our clients insight into how users interact with the digital twins."
+          - "Optimized RAM, GPU usage, and initial load times to ensure smooth operation in our cloud-based environment."
+          - "Maintained and administered git repositories for Unreal Engine projects and plugins, balancing storage and egress costs with ease of use for our art team."
+      - company: "Gameloft Toronto"
+        position: "Programmer"
+        date:
+        start_date: "2019-07"
+        end_date: "2024-04"
+        location:
+        summary:
+        highlights:
+          - "Integrated data tracking functionality in C++ for [Disney Magic Kingdoms](https://gamesbycarter.vercel.app/#dmk)' iOS version, measuring usage of major gameplay and e-commerce features with minimal runtime overhead."
+          - "Coordinated with the Design and Feature teams early in the design process to ensure that new feature implementations were carefully planned with the necessary data tracking in mind."
+          - "Eliminated redundant or unnecessary data to optimize storage costs, while still meeting our data clients' needs."
+          - "Analyzed decade old legacy code to identify and resolve long-standing data tracking issues."
+          - "Integrated and updated external libraries using Premake."
+          - "Contributed to an effort to port game code from our custom C++ game engine to Unity/C#."
+      - company: "Humber College"
+        position: "Peer Tutor"
+        date:
+        start_date: "2018-10"
+        end_date: "2019-04"
+        location:
+        summary:
+        highlights:
+          - "One-on-one tutoring sessions to help students understand math and programming concepts."
+          - "Ran a weekly game engine workshop, designed to give first and second year Game Programming students a starting point for creating their own game engines."
+    education:
+      - institution: "Humber College"
+        area: "Game Programming (Advanced Diploma)"
+        degree:
+        grade:
+        date:
+        start_date: "2016"
+        end_date: "2019"
+        location:
+        summary:
+        highlights:
+          - "Learned object-oriented programming fundamentals in C++, C#, and Java."
+          - "Designed and implemented fundamental components of games, such as 3D physics, Artificial Intelligence, and 3D graphics with OpenGL."
+          - "Led a team of students in creating a custom game engine in C++ for our Capstone Project, and used the engine to create a physics-based 3D platforming game called *Roof Toppers*."
+    projects:
+      - name: "GadgetEngine"
+        date:
+        start_date: "2022"
+        end_date: "present"
+        location:
+        summary: "C++ / OpenGL"
+        highlights:
+          - "[GadgetCore](https://github.com/ShikenNuggets/GadgetCore) is a general purpose library of reusable components for game engines and other games-adjacent projects, including a custom math library, common data structures, and platform abstractions on top of SDL3."
+          - "[GadgetEngine](https://github.com/ShikenNuggets/GadgetEngine) is a 3D-capable game engine featuring a custom OpenGL renderer and skeletal animation system."
+          - "Used the engine to [create a game](https://gamesbycarter.vercel.app/#whbg) for the GMTK Game Jam in 2024."
+      - name: "Secret Identity"
+        date:
+        start_date: "2024-04"
+        end_date: "2024-06"
+        location:
+        summary: "UE5 / C++"
+        highlights:
+          - "Used Unreal Engine 5.4 to created a vertical slice for a [superhero-themed 3D action game](https://gamesbycarter.vercel.app/#secret-identity)."
+          - "Features a flight mechanic with cape physics, simple combat with enemy ragdolls, randomized enemy encounters, and UMG-based UI."
+      - name: "Roof Toppers and PizzaBox Game Engine"
+        date:
+        start_date: "2017"
+        end_date: "2019"
+        location:
+        summary: "C++ / OpenGL"
+        highlights:
+          - "Led a team of 3 other students to create a custom game engine in C++, which we then used to create the physics-based 3D platformer [*Roof Toppers*](https://gamesbycarter.vercel.app/#roof-toppers)."
+          - "Designed the fundamental structure of the game engine and implemented major features such as skeletal animation, shadow mapping, and UI."
+          - "Scheduled work and delegated tasks to the team members, managed the git repository, and reviewed contributions to maintain code quality and efficiency."
+    skills:
+      - label: "Programming Languages"
+        details: "C++, C#, Python"
+      - label: "Game Engines"
+        details: "Unreal Engine 5, Unity, Proprietary C++ Engines"
+      - label: "Graphics and Math"
+        details: "Linear Algebra, OpenGL, Skeletal Animation, Shaders (GLSL/HLSL)"
+      - label: "Tooling"
+        details: "CMake, Premake, Git, SVN"
+  sort_entries: "none"
+design:
+  theme: "classic"
+  page:
+    size: "us-letter"
+    top_margin: "2cm"
+    bottom_margin: "2cm"
+    left_margin: "2cm"
+    right_margin: "2cm"
+    show_page_numbering: false
+    show_last_updated_date: false
+  colors:
+    text: "rgb(0, 0, 0)"
+    name: "rgb(0, 79, 144)"
+    connections: "rgb(0, 79, 144)"
+    section_titles: "rgb(0, 79, 144)"
+    links: "rgb(0, 79, 144)"
+    last_updated_date_and_page_numbering: "rgb(128, 128, 128)"
+  text:
+    font_family: "Source Sans 3"
+    font_size: "10pt"
+    leading: "0.6em"
+    alignment: "left"
+    date_and_location_column_alignment: "right"
+  links:
+    underline: false
+    use_external_link_icon: false
+  header:
+    name_font_family: "Source Sans 3"
+    name_font_size: "30pt"
+    name_bold: true
+    small_caps_for_name: false
+    photo_width: "3.5cm"
+    vertical_space_between_name_and_connections: "0.7cm"
+    vertical_space_between_connections_and_first_section: "0.7cm"
+    horizontal_space_between_connections: "0.5cm"
+    connections_font_family: "Source Sans 3"
+    separator_between_connections: ""
+    use_icons_for_connections: true
+    use_urls_as_placeholders_for_connections: false
+    make_connections_links: true
+    alignment: "center"
+  section_titles:
+    type: "with-partial-line"
+    font_family: "Source Sans 3"
+    font_size: "1.4em"
+    bold: true
+    small_caps: false
+    line_thickness: "0.5pt"
+    vertical_space_above: "0.5cm"
+    vertical_space_below: "0.3cm"
+  entries:
+    date_and_location_width: "4.15cm"
+    left_and_right_margin: "0.2cm"
+    horizontal_space_between_columns: "0.1cm"
+    vertical_space_between_entries: "1.2em"
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+    short_second_row: false
+    show_time_spans_in: []
+  highlights:
+    bullet: "•"
+    nested_bullet: "-"
+    top_margin: "0.25cm"
+    left_margin: "0.4cm"
+    vertical_space_between_highlights: "0.25cm"
+    horizontal_space_between_bullet_and_highlight: "0.5em"
+    summary_left_margin: "0cm"
+  entry_types:
+    one_line_entry:
+      template: "**LABEL:** DETAILS"
+    education_entry:
+      main_column_first_row_template: "**INSTITUTION**, AREA"
+      degree_column_template: "**DEGREE**"
+      degree_column_width: "0cm"
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    normal_entry:
+      main_column_first_row_template: "**NAME**"
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    experience_entry:
+      main_column_first_row_template: "**POSITION**, COMPANY"
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    publication_entry:
+      main_column_first_row_template: "**TITLE**"
+      main_column_second_row_template: |-
+        AUTHORS
+        URL (JOURNAL)
+      main_column_second_row_without_journal_template: |-
+        AUTHORS
+        URL
+      main_column_second_row_without_url_template: |-
+        AUTHORS
+        JOURNAL
+      date_and_location_column_template: "DATE"
+locale:
+  language: "en"
+  phone_number_format: "national"
+  page_numbering_template: "NAME - Page PAGE_NUMBER of TOTAL_PAGES"
+  last_updated_date_template: "Last updated in TODAY"
+  date_template: "MONTH_ABBREVIATION YEAR"
+  month: "month"
+  months: "months"
+  year: "year"
+  years: "years"
+  present: "present"
+  to: "–"
+  abbreviations_for_months:
+    - "Jan"
+    - "Feb"
+    - "Mar"
+    - "Apr"
+    - "May"
+    - "June"
+    - "July"
+    - "Aug"
+    - "Sept"
+    - "Oct"
+    - "Nov"
+    - "Dec"
+  full_names_of_months:
+    - "January"
+    - "February"
+    - "March"
+    - "April"
+    - "May"
+    - "June"
+    - "July"
+    - "August"
+    - "September"
+    - "October"
+    - "November"
+    - "December"
+rendercv_settings:
+  date: "2026-01-24"
+  bold_keywords: []
+  sort_entries: "none"
