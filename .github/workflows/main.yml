@@ -1,0 +1,38 @@
+name: Generate and Deploy Resume
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/resume.yml'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install RenderCV
+        run: pip install "rendercv[full]"
+
+      - name: Generate CV
+        run: rendercv render content/resume.yml
+
+      - name: Copy PDF to Public Folder
+        run: |
+          mkdir -p public
+          # This finds the PDF in the output folder and renames it to resume.pdf
+          cp rendercv_output/*.pdf public/resume.pdf
+
+      - name: Commit and Push PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update resume pdf [skip ci]"
+          file_pattern: 'public/resume.pdf'
