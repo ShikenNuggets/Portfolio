@@ -1,3 +1,4 @@
+import Head from "next/head"
 import React from "react";
 import ProjectContent from "./ProjectContent";
 
@@ -16,6 +17,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   return (
     <>
       <div className="modal-overlay" onClick={onClose}>
+        <Head>
+          <title>{title} - Games by Carter</title>
+        </Head>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <button
             className="modal-close-button"
