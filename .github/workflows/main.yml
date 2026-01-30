@@ -20,7 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install RenderCV
-        run: pip install "rendercv[full]==3.2"
+        run: pip install "rendercv[full]==2.3"
 
       - name: Generate CV
         run: rendercv render content/resume.yml
