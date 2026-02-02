@@ -6,6 +6,7 @@ import ContactModal from "./ContactModal";
 
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleHash = () => {
@@ -20,11 +21,12 @@ const Navbar = () => {
     handleHash();
     window.addEventListener("hashchange", handleHash);
     return () => window.removeEventListener("hashchange", handleHash);
-  });
+  }, []);
 
   const openModal = () => {
     window.location.hash = "contact";
     setModalOpen(true);
+    setIsMenuOpen(false);
   };
 
   const closeModal = () => {
@@ -55,16 +57,52 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div>
+        <div className="flex items-center">
           <a
-            className="navbar-contact-modal hidden lg:flex items-cneter gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+            className="navbar-contact-modal hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 cursor-pointer"
             style={{ textDecoration: "none" }}
             onClick={openModal}
           >
             <h1>Contact</h1>
           </a>
+
+          <button 
+            className="md:hidden flex flex-col gap-1.5 ml-4" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className={`h-0.5 w-6 bg-current transform transition ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 w-6 bg-current transition ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`h-0.5 w-6 bg-current transform transition ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
         </div>
         {modalOpen && true && true && <ContactModal onClose={closeModal} />}
+        {isMenuOpen && (
+          <div className="fixed top-[70px] left-0 w-full bg-white !backdrop-blur-2xl border-b border-gray-200 flex flex-col items-center py-8 gap-6 md:hidden z-50 shadow-lg navbar">
+            <Link 
+              href="/" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ textDecoration: "none" }}
+            >
+              <h1 className="text-lg">Home</h1>
+            </Link>
+            
+            <Link 
+              href="/about" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ textDecoration: "none" }}
+            >
+              <h1 className="text-lg">About Me</h1>
+            </Link>
+
+            <a 
+              onClick={openModal} 
+              className="cursor-pointer"
+              style={{ textDecoration: "none" }}
+            >
+              <h1 className="text-lg">Contact</h1>
+            </a>
+          </div>
+        )}
       </nav>
     </>
   );
