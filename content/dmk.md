@@ -2,7 +2,7 @@
 **Team:** [Gameloft Toronto](https://www.gameloft.com/gameloft-studios/toronto)
 **Type:** Freemium Tycoon (Commercial)
 **Timeline:** July 2019 - April 2024 (4 years, 10 months)
-**Tech (Primary):** C++ / SVN
+**Tech (Primary):** C++ / SVN / Premake
 **Tech (Additional):** Unity / C# / Git
 **Reason for Ending:** Corporate Restructuring
 

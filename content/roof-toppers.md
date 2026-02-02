@@ -22,6 +22,6 @@ https://www.youtube.com/watch?v=3cyw8ZrNRYQ
 
 *Roof Toppers* and the *PizzaBox* engine demo reel were showcased at Humber College’s *Capstone Showcase*, and the *Level Up Showcase* in April 2019.
 
-You can download [the most recent build of Roof Toppers here](https://drive.google.com/file/d/1R_utEoj30kkqsgedM-YVawIYhmilak7H).
+You can download [the most recent build of Roof Toppers here](https://github.com/ShikenNuggets/RoofToppersGame/releases).
 
-[Engine](https://bitbucket.org/gpcapstoneteam/capstoneproject) and [Game](https://bitbucket.org/gpcapstoneteam/gameproject) Code are available in separate Bitbucket repositories.
+[Engine](https://github.com/ShikenNuggets/PizzaBox) and [Game](https://github.com/ShikenNuggets/RoofToppersGame) code are available in separate repositories.
