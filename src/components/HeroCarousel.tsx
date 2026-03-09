@@ -18,7 +18,7 @@ const responsive = {
 
 const projects: Record<string, Project> = {
   clay: { title: "Clay Software Corporation", type: "Clay Software Corporation", tech: "Unreal Engine Software Developer", years: "2024 - Present" },
-  dmk: { title: "Disney Magic Kingdoms", type: "Gameloft Toront", tech: "Programmer (C++)", years: "2019 - 2024" },
+  dmk: { title: "Disney Magic Kingdoms", type: "Gameloft Toronto", tech: "Programmer (C++)", years: "2019 - 2024" },
 };
 
 type HeroCarouselProps = {
