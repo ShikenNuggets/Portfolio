@@ -3,7 +3,7 @@ cv:
   location: "Toronto, ON, Canada"
   email: "carter.rennick@gmail.com"
   phone: "+16133298544"
-  website: "https://gamesbycarter.vercel.app/"
+  website: "https://gamesbycarter.vercel.app"
   social_networks:
     - network: "LinkedIn"
       username: "carterrrennick"
@@ -21,14 +21,11 @@ cv:
         location:
         summary:
         highlights:
-          - "Created standardized C++ plugins used by dozens of architecture visualization projects, allowing new features and bug fixes to be rolled out to all projects seamlessly."
-          - "Built custom editor utilities and C++ automation tools to procedurally generate 3D environments based on client-provided 2D floorplans, significantly reducing initial setup time for new projects."
+          - "Consolidated disparate prototype functionality from Unreal Blueprints into organized, performant, and production-ready C++ plugins, allowing new features and bug fixes to be seamlessly rolled out to dozens of ArchViz projects."
+          - "Built custom editor utilities and C++ automation tools to procedurally generate 3D environments based on client-provided 2D floorplans, significantly reducing setup time for new projects."
           - "Designed a self-serve customization system to allow clients to adjust lighting, materials, and furniture placement at runtime, without needing to use finite art team resources or rebuild/redeploy applications."
-          - "Automated capturing and exporting high resolution 360° panoramic images of our environments."
-          - "Created a highly intuitive player navigation system for exploring the digital twins, designed to require minimal setup per-project and be easy to learn for users with no real-time video game experience."
-          - "Consolidated disparate prototype functionality from Unreal blueprints into organized, performant, and production-ready C++ code."
-          - "Integrated data tracking functionality to give our clients insight into how users interact with the digital twins."
-          - "Optimized RAM, GPU usage, and initial load times to ensure smooth operation in our cloud environment."
+          - "Created a highly intuitive player navigation system for exploring the digital twins, requiring minimal setup per-project and providing an accessible, easy to learn experience for non-technical users."
+          - "Optimized RAM and GPU usage, and reduced worst-case load times by 80% to ensure smooth operation in our AWS cloud environment."
       - company: "Gameloft Toronto"
         position: "Programmer"
         date:
@@ -37,12 +34,11 @@ cv:
         location:
         summary:
         highlights:
-          - "Integrated data tracking functionality in C++ for [Disney Magic Kingdoms](https://gamesbycarter.vercel.app/#dmk)' iOS version, measuring usage of major gameplay and e-commerce features with minimal runtime overhead."
-          - "Coordinated with the Design and Feature teams early in the design process to ensure that new feature implementations were carefully planned with the necessary data tracking in mind."
-          - "Eliminated redundant or unnecessary data to optimize storage costs, while still meeting our data clients' needs."
+          - "Championed C++ data tracking integration for [Disney Magic Kingdoms](https://gamesbycarter.vercel.app/#dmk)' iOS version, collaborating with the Features team to measure usage of major gameplay and e-commerce features with minimal runtime overhead."
+          - "Eliminated redundant and unnecessary data to optimize storage costs while still meeting our data clients' needs."
           - "Analyzed decade old legacy code to identify and resolve long-standing data tracking issues."
           - "Integrated and updated external libraries using Premake."
-          - "Contributed to an effort to port game code from our custom C++ game engine to Unity/C#."
+          - "Ported data tracking, UI, and anti-tampering code from a proprietary C++ game engine to Unity/C#."
       - company: "Humber College"
         position: "Peer Tutor"
         date:
@@ -51,8 +47,7 @@ cv:
         location:
         summary:
         highlights:
-          - "One-on-one tutoring sessions to help students understand math and programming concepts."
-          - "Ran a weekly game engine workshop, designed to give first and second year Game Programming students a starting point for creating their own game engines."
+          - "Ran workshops and one-on-one tutoring sessions to help students understand math and programming concepts."
     education:
       - institution: "Humber College"
         area: "Game Programming (Advanced Diploma)"
@@ -64,57 +59,43 @@ cv:
         location:
         summary:
         highlights:
-          - "Learned object-oriented programming fundamentals in C++, C#, and Java."
-          - "Designed and implemented fundamental components of games, such as 3D physics, Artificial Intelligence, and 3D graphics with OpenGL."
-          - "Led a team of students in creating a custom game engine in C++ for our Capstone Project, and used the engine to create a physics-based 3D platforming game called *Roof Toppers*."
+          - "Capstone Project: led a team of students in creating a custom C++ game engine and a [physics-based 3D platformer](https://gamesbycarter.vercel.app/#roof-toppers)."
     projects:
-      - name: "GadgetEngine"
+      - name: "GadgetEngine | C++ / OpenGL"
         date:
         start_date: "2022"
         end_date: "present"
         location:
-        summary: "C++ / OpenGL"
+        summary:
         highlights:
-          - "[GadgetCore](https://github.com/ShikenNuggets/GadgetCore) is a general purpose library of reusable components for game engines and other games-adjacent projects, including a custom math library, common data structures, and platform abstractions on top of SDL3."
-          - "[GadgetEngine](https://github.com/ShikenNuggets/GadgetEngine) is a 3D-capable game engine featuring a custom OpenGL renderer and skeletal animation system."
-          - "Used the engine to [create a game](https://gamesbycarter.vercel.app/#whbg) for the GMTK Game Jam in 2024."
-      - name: "Secret Identity"
+          - "Developed a [3D-capable game engine](https://github.com/ShikenNuggets/GadgetEngine) and [reusable C++ component library](https://github.com/ShikenNuggets/GadgetCore), featuring a custom OpenGL renderer, skeletal animation, and platform abstractions on top of SDL3."
+          - "Used the engine to [publish a game](https://gamesbycarter.vercel.app/#whbg) for the GMTK Game Jam in 2024."
+      - name: "Secret Identity | UE5 / C++"
         date:
         start_date: "2024-04"
         end_date: "2024-06"
         location:
-        summary: "UE5 / C++"
+        summary:
         highlights:
-          - "Used Unreal Engine 5.4 to created a vertical slice for a [superhero-themed 3D action game](https://gamesbycarter.vercel.app/#secret-identity)."
-          - "Features a flight mechanic with cape physics, simple combat with enemy ragdolls, randomized enemy encounters, and UMG-based UI."
-      - name: "Roof Toppers and PizzaBox Game Engine"
-        date:
-        start_date: "2017"
-        end_date: "2019"
-        location:
-        summary: "C++ / OpenGL"
-        highlights:
-          - "Led a team of 3 other students to create a custom game engine in C++, which we then used to create the physics-based 3D platformer [*Roof Toppers*](https://gamesbycarter.vercel.app/#roof-toppers)."
-          - "Designed the fundamental structure of the game engine and implemented major features such as skeletal animation, shadow mapping, and UI."
-          - "Scheduled work and delegated tasks to the team members, managed the git repository, and reviewed contributions to maintain code quality and efficiency."
+          - "Created a vertical slice for a [superhero action game](https://gamesbycarter.vercel.app/#secret-identity) in Unreal Engine 5.4, implementing flight mechanics with cape physics, randomized enemy encounters, and UMG-based UI."
     skills:
       - label: "Programming Languages"
         details: "C++, C#, Python"
       - label: "Game Engines"
-        details: "Unreal Engine 5, Unity, Proprietary C++ Engines"
+        details: "Unreal Engine 5.3 - 5.7, Proprietary C++ Engines, Unity"
       - label: "Graphics and Math"
         details: "Linear Algebra, OpenGL, Skeletal Animation, Shaders (GLSL/HLSL)"
       - label: "Tooling"
-        details: "CMake, Premake, Git, SVN"
+        details: "CMake, Premake, Git, SVN, Visual Studio"
   sort_entries: "none"
 design:
   theme: "classic"
   page:
     size: "us-letter"
-    top_margin: "2cm"
-    bottom_margin: "2cm"
-    left_margin: "2cm"
-    right_margin: "2cm"
+    top_margin: "0.65in"
+    bottom_margin: "0.65in"
+    left_margin: "0.65in"
+    right_margin: "0.65in"
     show_page_numbering: false
     show_last_updated_date: false
   colors:
@@ -135,12 +116,12 @@ design:
     use_external_link_icon: false
   header:
     name_font_family: "Source Sans 3"
-    name_font_size: "30pt"
+    name_font_size: "24pt"
     name_bold: true
     small_caps_for_name: false
     photo_width: "3.5cm"
-    vertical_space_between_name_and_connections: "0.7cm"
-    vertical_space_between_connections_and_first_section: "0.7cm"
+    vertical_space_between_name_and_connections: "0.5cm"
+    vertical_space_between_connections_and_first_section: "0.5cm"
     horizontal_space_between_connections: "0.5cm"
     connections_font_family: "Source Sans 3"
     separator_between_connections: " | "
@@ -170,7 +151,7 @@ design:
     bullet: "•"
     nested_bullet: "-"
     top_margin: "0.25cm"
-    left_margin: "0.4cm"
+    left_margin: "0.1cm"
     vertical_space_between_highlights: "0.25cm"
     horizontal_space_between_bullet_and_highlight: "0.5em"
     summary_left_margin: "0cm"
