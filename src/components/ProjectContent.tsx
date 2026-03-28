@@ -13,6 +13,7 @@ const ProjectContent = ({ title, markdownContent }: ProjectContentProps) => {
       <div>
         <h1
           style={{
+            textAlign: "center",
             justifySelf: "center",
             fontSize: "xx-large",
             marginBottom: "0.5%",
