@@ -11,7 +11,7 @@ cv:
       username: "ShikenNuggets"
   sections:
     Professional Summary:
-      - "Engine & Systems Programmer with over 6 years of experience in games/adjacent roles, specializing in C++, Unreal Engine 5, and proprietary game engines. Strong collaborator with cross-discipline teams. Possesses deep understanding and implementation experience with lower level subsystems such as skeletal animation and rendering. Capable of optimizing production pipelines through procedural automation, and experienced with runtime performance optimization. Adept at eliminating technical debt within large legacy codebases."
+      - "Generalist C++ developer with over 6 years of experience in game development and adjacent roles, with a focus on proprietary game engines and Unreal Engine 5. Proficient in procedural automation, gameplay programming, data tracking, and low-level subsystems such as skeletal animation and rendering. Proven experience collaborating with cross-discipline teams, optimizing production pipelines, and eliminating technical debt."
     experience:
       - company: "Clay Software Corporation"
         position: "Unreal Engine Software Developer"
