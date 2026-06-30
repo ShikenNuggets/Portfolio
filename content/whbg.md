@@ -1,11 +1,11 @@
 **Team:** Solo
 **Type:** 3D Platformer (Personal - Game Jam)
 **Timeline:** Aug 16-19, 2024 (4 days)
-**Tech:** C++ [(GadgetEngine)](/projects/gadget) / OpenGL / Git
+**Tech:** C++ [(GadgetEngine)](#gadget) / OpenGL / Git
 
 https://www.youtube.com/watch?v=i_34XPndMCA
 
-For this year’s [GMTK Game Jam](https://itch.io/jam/gmtk-2024), rather than using a more established engine like Unity, Unreal, or Godot, I decided to try using my own engine that I’ve been working on, [Gadget Engine](https://gamesbycarter.wordpress.com/2022/06/22/gadget-engine-c/). This presented a number of challenges and definitely limited the quality of game that I was able to produce, but ultimately was very rewarding and helped me identify a number of issues and fix numerous bugs (I made 52 commits to the engine during the jam).
+For this year’s [GMTK Game Jam](https://itch.io/jam/gmtk-2024), rather than using a more established engine like Unity, Unreal, or Godot, I decided to try using my own engine that I’ve been working on, [Gadget Engine](#gadget). This presented a number of challenges and definitely limited the quality of game that I was able to produce, but ultimately was very rewarding and helped me identify a number of issues and fix numerous bugs (I made 52 commits to the engine during the jam).
 
 The theme of the jam was “Built to Scale”. I loved this theme! So many ways to interpret it. Big things, small things, growing, shrinking, building things, physical scales for measuring weight, reptile/fish scales, scaling in a programming context, climbing, the possibilities really were endless! The first thing that popped into my head was some kind of Ant-Man game, where you’d shrink down to jump through key holes and grow to smash through walls. I thought of some other ideas, but that was the one I ultimately fleshed out, although I replaced Ant-Man with a hamster, partly because I thought it would be funny, and partly because I don’t actually have character animation available in Gadget yet (that’s my next priority!), and so “Weird Hamster Ball Game” was formed (I couldn’t think of a name, so my placeholder name stuck through to the end).
 
