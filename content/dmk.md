@@ -1,5 +1,5 @@
 **Role:** Programmer (Tech Team - Data Tracking)
-**Team:** [Gameloft Toronto](https://www.gameloft.com/gameloft-studios/toronto)
+**Team:** Gameloft Toronto
 **Type:** Freemium Tycoon (Commercial)
 **Timeline:** July 2019 - April 2024 (4 years, 10 months)
 **Tech (Primary):** C++ / SVN / Premake
