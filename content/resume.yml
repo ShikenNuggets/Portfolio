@@ -11,7 +11,7 @@ cv:
       username: "ShikenNuggets"
   sections:
     Professional Summary:
-      - "Generalist C++ developer with over 6 years of experience in game development and adjacent roles, with a focus on proprietary game engines and Unreal Engine 5. Proficient in procedural automation, gameplay programming, data tracking, and low-level subsystems such as skeletal animation and rendering. Proven experience collaborating with cross-discipline teams, optimizing production pipelines, and eliminating technical debt."
+      - "Generalist software developer with 6+ years of experience in game development and real-time 3D applications, with a focus on C++, proprietary game engines, and Unreal Engine 5. Proficient in procedural and AI-driven automation, gameplay programming, telemetry, and low-level subsystems such as skeletal animation and rendering. Proven experience collaborating with cross-discipline teams, optimizing production pipelines, and eliminating technical debt."
     experience:
       - company: "Clay Software Corporation"
         position: "Unreal Engine Software Developer"
@@ -22,8 +22,8 @@ cv:
         summary:
         highlights:
           - "Consolidated disparate prototype functionality from Unreal Blueprints into organized, performant, and production-ready C++ plugins, allowing new features and bug fixes to be seamlessly rolled out to dozens of ArchViz projects."
-          - "Built custom editor utilities and C++ automation tools to procedurally generate 3D environments based on client-provided 2D floorplans, significantly reducing setup time for new projects."
-          - "Designed a self-serve customization system to allow clients to adjust lighting, materials, and furniture placement at runtime, without needing to use finite art team resources or rebuild/redeploy applications."
+          - "Built automation workflows with C++-based Unreal Editor tools, Python scripts, and MCP tools  to generate 3D environments from client-provided 2D schematics, significantly reducing setup time for new projects."
+          - "Designed a self-serve customization system to allow lighting, materials, and furniture placement to be configured at runtime without needing to rebuild/redeploy applications."
           - "Created a highly intuitive player navigation system for exploring the digital twins, requiring minimal setup per-project and providing an accessible, easy to learn experience for non-technical users."
           - "Optimized RAM and GPU usage, and reduced worst-case load times by 80% to ensure smooth operation in our AWS cloud environment."
       - company: "Gameloft Toronto"
@@ -82,11 +82,11 @@ cv:
       - label: "Programming Languages"
         details: "C++, C#, Python"
       - label: "Game Engines"
-        details: "Unreal Engine 5.3 - 5.7, Proprietary C++ Engines, Unity"
+        details: "Unreal Engine 5.3 - 5.8, Proprietary C++ Engines, Unity"
       - label: "Graphics and Math"
         details: "Linear Algebra, OpenGL, Skeletal Animation, Shaders (GLSL/HLSL)"
       - label: "Tooling"
-        details: "CMake, Premake, Git, SVN, Visual Studio"
+        details: "CMake, Premake, Git, SVN, Visual Studio, Vscode"
   sort_entries: "none"
 design:
   theme: "classic"
