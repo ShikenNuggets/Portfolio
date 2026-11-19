@@ -1,0 +1,11 @@
+# Normalize text files to LF across all platforms
+* text=auto eol=lf
+
+# Windows batch scripts require CRLF
+*.bat text eol=crlf
+
+# Explicitly mark binary assets
+*.png binary
+*.webp binary
+*.ico binary
+*.pdf binary
