@@ -5,6 +5,8 @@ on:
     branches: [ main ]
     paths:
       - 'content/resume.yml'
+      - '.github/workflows/main.yml'
+  workflow_dispatch:
 
 jobs:
   render:
@@ -20,7 +22,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install RenderCV
-        run: pip install --force-reinstall "rendercv[full]==2.3"
+        # RenderCV 2.3 imports click.core.Parameter directly; typer>=0.26 vendored Click
+        # and dropped it as a dependency, causing rendercv.cli to mask the ImportError.
+        run: pip install "rendercv[full]==2.3" "typer<0.26" "click<9"
 
       - name: Generate CV
         run: rendercv render content/resume.yml
