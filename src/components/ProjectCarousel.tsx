@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import ProjectEntry, { Project } from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
 
-import { UseHashModal } from "@/utils/UseHashModal";
+import { useHashModal } from "@/utils/UseHashModal";
 
 const responsive = {
   desktop: {
@@ -38,7 +38,7 @@ export default function ProjectCarousel({
   markdownContents,
 }: ProjectCarouselProps) {
   const { modalOpen, activeProject, activeTitle, openModal, closeModal } =
-    UseHashModal(projects);
+    useHashModal(projects);
 
   return (
     <>
