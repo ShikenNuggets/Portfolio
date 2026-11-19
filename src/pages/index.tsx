@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React from "react";
 
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 type ModalProjects = Record<string, Project>;
 
-export function UseHashModal(projects: ModalProjects){
+export function useHashModal(projects: ModalProjects){
 	const [modalOpen, setModalOpen] = useState(false);
 	const [activeProject, setActiveProject] = useState<string | null>(null);
 	const [activeTitle, setActiveProjectTitle] = useState<string | null>(null);

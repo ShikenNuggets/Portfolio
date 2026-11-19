@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import ProjectEntry, { Project } from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
-import { UseHashModal } from "@/utils/UseHashModal";
+import { useHashModal } from "@/utils/UseHashModal";
 
 const responsive = {
   desktop: {
@@ -27,7 +27,7 @@ type HeroCarouselProps = {
 
 export default function HeroCarousel({ markdownContents }: HeroCarouselProps) {
   const { modalOpen, activeProject, activeTitle, openModal, closeModal } =
-    UseHashModal(projects);
+    useHashModal(projects);
 
   return (
     <>
