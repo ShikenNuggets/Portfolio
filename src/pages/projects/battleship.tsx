@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Battleship Text Game';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/battleship.md');
+export const getStaticProps = getStaticPropsFromFile('battleship.md');
 
 export default function Battleship({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

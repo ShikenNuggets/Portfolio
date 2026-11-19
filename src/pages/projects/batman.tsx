@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Batman NES Remake';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/batman.md');
+export const getStaticProps = getStaticPropsFromFile('batman.md');
 
 export default function Batman({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

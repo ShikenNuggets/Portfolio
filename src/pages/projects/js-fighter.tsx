@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Street Fighter Clone';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/js-fighter.md');
+export const getStaticProps = getStaticPropsFromFile('js-fighter.md');
 
 export default function JSFighter({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

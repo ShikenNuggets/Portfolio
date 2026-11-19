@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Roof Toppers';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/roof-toppers.md');
+export const getStaticProps = getStaticPropsFromFile('roof-toppers.md');
 
 export default function RoofToppers({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

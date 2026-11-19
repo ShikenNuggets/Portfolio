@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Gadget Engine';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/gadget.md');
+export const getStaticProps = getStaticPropsFromFile('gadget.md');
 
 export default function Gadget({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Clay Software Corporation';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/clay.md');
+export const getStaticProps = getStaticPropsFromFile('clay.md');
 
 export default function Clay({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

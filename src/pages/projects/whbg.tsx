@@ -5,7 +5,7 @@ import getStaticPropsFromFile from '@/utils/FileContentsHelper'
 import ProjectContent from "@/components/ProjectContent";
 
 const TITLE = 'Weird Hamster Ball Game - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/whbg.md');
+export const getStaticProps = getStaticPropsFromFile('whbg.md');
 
 export default function WHBG({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

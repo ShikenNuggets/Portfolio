@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = "About Me";
 const TITLE = ProjectName + " - Games by Carter";
-export const getStaticProps = getStaticPropsFromFile("content/about.md");
+export const getStaticProps = getStaticPropsFromFile("about.md");
 
 export default function AboutMe({ fileContent }: { fileContent: string }) {
   useEffect(() => {

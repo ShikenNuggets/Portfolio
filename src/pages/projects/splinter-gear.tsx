@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Splinter Gear';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/splinter-gear.md');
+export const getStaticProps = getStaticPropsFromFile('splinter-gear.md');
 
 export default function SplinterGear({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

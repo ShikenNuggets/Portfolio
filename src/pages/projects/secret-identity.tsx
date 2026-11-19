@@ -5,7 +5,7 @@ import ProjectContent from "@/components/ProjectContent";
 import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const TITLE = 'Secret Identity - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/secret-identity.md');
+export const getStaticProps = getStaticPropsFromFile('secret-identity.md');
 
 export default function SecretIdentity({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

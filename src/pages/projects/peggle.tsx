@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Peggle Clone';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/peggle.md');
+export const getStaticProps = getStaticPropsFromFile('peggle.md');
 
 export default function Peggle({ fileContent }: { fileContent: string }) {
 	useEffect(() => {

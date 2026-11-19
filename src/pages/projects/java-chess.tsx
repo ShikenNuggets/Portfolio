@@ -6,7 +6,7 @@ import getStaticPropsFromFile from "@/utils/FileContentsHelper";
 
 const ProjectName = 'Chess (Java)';
 const TITLE = ProjectName + ' - Games by Carter';
-export const getStaticProps = getStaticPropsFromFile('content/java-chess.md');
+export const getStaticProps = getStaticPropsFromFile('java-chess.md');
 
 export default function JavaChess({ fileContent }: { fileContent: string }) {
 	useEffect(() => {
