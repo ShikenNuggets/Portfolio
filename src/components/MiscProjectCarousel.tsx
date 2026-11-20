@@ -49,8 +49,6 @@ export default function MiscProjectCarousel({
           transitionDuration={500}
           containerClass="carousel-container"
           deviceType="desktop"
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
           slidesToSlide={1}
         >
           {Object.entries(projects).map(([shortName, project]) => (
@@ -66,7 +64,6 @@ export default function MiscProjectCarousel({
       </div>
       {modalOpen && activeProject && activeTitle && (
         <ProjectModal
-          shortName={activeProject}
           onClose={closeModal}
           title={activeTitle}
           markdownContent={markdownContents[activeProject]}

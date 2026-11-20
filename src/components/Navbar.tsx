@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -75,7 +74,7 @@ const Navbar = () => {
             <span className={`h-0.5 w-6 bg-current transform transition ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
-        {modalOpen && true && true && <ContactModal onClose={closeModal} />}
+        {modalOpen && <ContactModal onClose={closeModal} />}
         {isMenuOpen && (
           <div className="fixed top-[70px] left-0 w-full bg-white !backdrop-blur-2xl border-b border-gray-200 flex flex-col items-center py-8 gap-6 md:hidden z-50 shadow-lg navbar">
             <Link 
