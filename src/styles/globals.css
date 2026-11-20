@@ -37,28 +37,14 @@ a:link {
   text-decoration: underline;
 }
 
-.test{
-  max-width: 100%;
-}
-
 .section-header{
   flex: 1 1 100%; /* This forces the item to occupy the entire row */
   padding: 15px;
   font-size: x-large;
 }
 
-.main-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-right: 0px;
-  padding: 2%;
-}
-
 .project-container{
   position: relative;
-  margin: 0 auto;
   width: auto;
   height: auto;
   flex: 1 1 32%;
@@ -100,8 +86,6 @@ a:link {
   justify-self: center;
   border-radius: 15px;
   padding: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
   text-align: left;
   width: 90%;
   max-width: 620px;
