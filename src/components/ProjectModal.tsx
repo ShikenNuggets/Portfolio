@@ -3,7 +3,6 @@ import React from "react";
 import ProjectContent from "./ProjectContent";
 
 interface ProjectModalProps {
-  shortName: string;
   onClose: () => void;
   title: string;
   markdownContent: string | undefined;

@@ -43,8 +43,6 @@ export default function HeroCarousel({ markdownContents }: HeroCarouselProps) {
           autoPlay={false}
           removeArrowOnDeviceType={["desktop"]}
           containerClass="carousel-container"
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
         >
           {Object.entries(projects).map(([shortName, project], index) => (
             <div key={shortName}>
@@ -60,7 +58,6 @@ export default function HeroCarousel({ markdownContents }: HeroCarouselProps) {
       </div>
       {modalOpen && activeProject && activeTitle && (
         <ProjectModal
-          shortName={activeProject}
           onClose={closeModal}
           title={activeTitle}
           markdownContent={markdownContents[activeProject]}
