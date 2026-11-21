@@ -7,10 +7,10 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import MiscProjectCarousel from "@/components/MiscProjectCarousel";
 
 import { GetStaticProps } from "next";
-import { LoadAllMarkdowns } from "@/utils/FileContentsHelper";
+import { loadProjectMarkdowns } from "@/utils/FileContentsHelper";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const markdowns = LoadAllMarkdowns();
+  const markdowns = loadProjectMarkdowns();
   return {
     props: {
       markdowns,

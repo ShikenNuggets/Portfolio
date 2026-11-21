@@ -1,39 +1,31 @@
 import { GetStaticProps } from "next";
-import fs from 'fs'
-import path from 'path'
+import fs from "fs";
+import path from "path";
+import { getVisibleProjects, type Project } from "@/data/projects";
 
 export function readContentFile(fileName: string): string {
-	const absolutePath = path.join(process.cwd(), 'content', fileName);
-	return fs.readFileSync(absolutePath, 'utf-8');
+  const absolutePath = path.join(process.cwd(), "content", fileName);
+  return fs.readFileSync(absolutePath, "utf-8");
 }
 
 export const getStaticFileContents = (fileName: string): GetStaticProps => {
-	return async () => {
-		const fileContent = readContentFile(fileName);
+  return async () => {
+    const fileContent = readContentFile(fileName);
 
-		return {
-			props: {
-				fileContent,
-			},
-		};
-	};
+    return {
+      props: {
+        fileContent,
+      },
+    };
+  };
 };
 
-export function LoadAllMarkdowns(){
-	const contentDir = path.join(process.cwd(), 'content');
-	const files = fs.readdirSync(contentDir);
-
-	const markdownMap: Record<string, string> = {}
-
-	files.forEach((file => {
-		if (file.endsWith(".md")){
-			const slug = file.replace(/\.md$/, '');
-			const content = fs.readFileSync(path.join(contentDir, file), 'utf-8');
-			markdownMap[slug] = content;
-		}
-	}));
-
-	return markdownMap;
+export function loadProjectMarkdowns(
+  projects: readonly Project[] = getVisibleProjects()
+): Record<string, string> {
+  return Object.fromEntries(
+    projects.map((project) => [project.slug, readContentFile(project.markdownFile)])
+  );
 }
 
 export default getStaticFileContents;
