@@ -1,12 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import type { Project } from "@/data/projects";
 
-export type Project = {
-  title: string;
-  type: string;
-  tech: string;
-  years: string;
-};
+export type { Project };
 
 interface ProjectProps {
   project: Project;

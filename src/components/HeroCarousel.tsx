@@ -1,8 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry, { Project } from "./ProjectEntry";
+import ProjectEntry from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
+import { getProjectRecord } from "@/data/projects";
 import { useHashModal } from "@/utils/UseHashModal";
 
 const responsive = {
@@ -16,10 +17,7 @@ const responsive = {
   },
 };
 
-const projects: Record<string, Project> = {
-  clay: { title: "Clay Software Corporation", type: "Clay Software Corporation", tech: "Unreal Engine Software Developer", years: "2024 - Present" },
-  dmk: { title: "Disney Magic Kingdoms", type: "Gameloft Toronto", tech: "Programmer (C++)", years: "2019 - 2024" },
-};
+const projects = getProjectRecord("professional");
 
 type HeroCarouselProps = {
   markdownContents: Record<string, string>;

@@ -1,8 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry, { Project } from "./ProjectEntry";
+import ProjectEntry from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
+import { getProjectRecord } from "@/data/projects";
 
 import { useHashModal } from "@/utils/UseHashModal";
 
@@ -17,18 +18,7 @@ const responsive = {
   },
 };
 
-const projects: Record<string, Project> = {
-  "gadget": { title: "Gadget Engine", type: "Personal Game Engine", tech: "C++", years: "2022 - Present" },
-  "whbg": { title: "Weird Hamster Ball Game", type: "Game Jam", tech: "C++", years: "2024" },
-  "secret-identity": { title: "Secret Identity", type: "Personal Project", tech: "UE5 / C++", years: "2024" },
-  "roof-toppers": { title: "Roof Toppers / PizzaBox Game Engine", type: "School Project", tech: "C++", years: "2017 - 2019" },
-  "splinter-gear": { title: "Splinter Gear", type: "School Project", tech: "Unity / C#", years: "2017-2018" },
-  //"java-chess": { title: "Java Chess", type: "School Project", tech: "Java", years: "2017-2018" },
-  "batman": { title: "Batman NES Remake", type: "School Project", tech: "Unity / C#", years: "2017" },
-  //"peggle": { title: "Peggle Clone", type: "School Project", tech: "C++", years: "2017" },
-  //"js-fighter": { title: "JavaScript Fighter", type: "School Project", tech: "JavaScript", years: "2017" },
-  //"battleship": { title: "Battleship", type: "School Project", tech: "C#", years: "2016" },
-};
+const projects = getProjectRecord("game");
 
 type ProjectCarouselProps = {
   markdownContents: Record<string, string>;

@@ -1,8 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ProjectEntry, { Project } from "./ProjectEntry";
+import ProjectEntry from "./ProjectEntry";
 import ProjectModal from "./ProjectModal";
+import { getProjectRecord } from "@/data/projects";
 import { useHashModal } from "@/utils/UseHashModal";
 
 const responsive = {
@@ -16,12 +17,7 @@ const responsive = {
   },
 };
 
-const projects: Record<string, Project> = {
-  "portfolio": { title: "Portfolio", type: "Web Front-End", tech: "React/TypeScript", years: "2025" },
-  "route-tracker": { title: "Arkham Speedrun Route Tracker", type: "Desktop Application", tech: "C#", years: "2020 - 2025" },
-  "speed-archive": { title: "SpeedArchive", type: "Console Utility", tech: "C#", years: "2019 - 2022" },
-  "batbot": { title: "Batbot", type: "Discord Bot", tech: "C#", years: "2019 - 2022" },
-};
+const projects = getProjectRecord("misc");
 
 type MiscrProjectCarouselProps = {
   markdownContents: Record<string, string>;
