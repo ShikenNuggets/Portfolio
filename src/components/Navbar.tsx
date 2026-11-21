@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full fixed-top px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 navbar">
+      <nav className="w-full sticky top-0 px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 navbar">
         <Link href="/" style={{ textDecoration: "none" }}>
           <h1>Games by Carter</h1>
         </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
         {modalOpen && <ContactModal onClose={closeModal} />}
         {isMenuOpen && (
-          <div className="fixed top-[70px] left-0 w-full bg-white !backdrop-blur-2xl border-b border-gray-200 flex flex-col items-center py-8 gap-6 md:hidden z-50 shadow-lg navbar">
+          <div className="absolute top-full left-0 w-full bg-background/95 text-foreground backdrop-blur-2xl border-b border-gray-200 dark:border-neutral-800 flex flex-col items-center py-8 gap-6 md:hidden z-50 shadow-lg">
             <Link 
               href="/" 
               onClick={() => setIsMenuOpen(false)}
