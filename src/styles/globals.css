@@ -12,25 +12,27 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body {
-  background-color: var(--background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: var(--foreground);
-  font-family: Inter, Arial, Helvetica, sans-serif;
-}
+@layer base {
+  body {
+    background-color: var(--background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--foreground);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+  }
 
-h1{
-  font-size: x-large;
-}
+  h1 {
+    font-size: x-large;
+  }
 
-h2{
-  font-size: large;
-}
+  h2 {
+    font-size: large;
+  }
 
-a:link {
-  text-decoration: underline;
+  a:link {
+    text-decoration: underline;
+  }
 }
 
 .section-header{
