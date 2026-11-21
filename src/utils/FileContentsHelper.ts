@@ -2,10 +2,14 @@ import { GetStaticProps } from "next";
 import fs from 'fs'
 import path from 'path'
 
+export function readContentFile(fileName: string): string {
+	const absolutePath = path.join(process.cwd(), 'content', fileName);
+	return fs.readFileSync(absolutePath, 'utf-8');
+}
+
 export const getStaticFileContents = (fileName: string): GetStaticProps => {
 	return async () => {
-		const absolutePath = path.join(process.cwd(), 'content', fileName);
-		const fileContent = fs.readFileSync(absolutePath, 'utf-8');
+		const fileContent = readContentFile(fileName);
 
 		return {
 			props: {
